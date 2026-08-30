@@ -1,0 +1,6 @@
+project_id = "nrbvowuozpbforgibdpq"
+
+[functions.telegram-bot]
+enabled = true
+verify_jwt = false
+entrypoint = "./functions/telegram-bot/index.ts"

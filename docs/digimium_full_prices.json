@@ -1,0 +1,1024 @@
+{
+  "rate": "6500",
+  "tax": "7",
+  "categories": [
+    {
+      "name": "AI Tools",
+      "products": [
+        {
+          "name": "ChatGPT",
+          "plans": [
+            {
+              "plan": "Go 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "55000",
+              "mmk": "55000",
+              "price_mmk": "55,000 Ks"
+            },
+            {
+              "plan": "Plus 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "130000",
+              "mmk": "130000",
+              "price_mmk": "130,000 Ks"
+            },
+            {
+              "plan": "Pro 5x 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "650000",
+              "price_mmk": "650,000 Ks"
+            },
+            {
+              "plan": "Pro 20x 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "1300000",
+              "price_mmk": "1,300,000 Ks"
+            },
+            {
+              "plan": "Business Pro 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "150000",
+              "price_mmk": "150,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Gemini (Google AI)",
+          "plans": [
+            {
+              "plan": "Google AI Pro (Gemini Pro) 3 month + 1 month Free (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            },
+            {
+              "plan": "Google AI Pro (Gemini Pro) 6 month + 2 month Free (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            },
+            {
+              "plan": "Google AI Pro (Gemini Pro) 12 month + 3 month Free (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            },
+            {
+              "plan": "Google AI Ultra 5x Plan 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "100",
+              "mmk": "650000",
+              "price_mmk": "650,000 Ks"
+            },
+            {
+              "plan": "Google AI Ultra 20x Plan 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "1300000",
+              "price_mmk": "1,300,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Claude",
+          "plans": [
+            {
+              "plan": "Pro 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "130000",
+              "price_mmk": "130,000 Ks"
+            },
+            {
+              "plan": "Max 5x Plan 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "650000",
+              "price_mmk": "650,000 Ks"
+            },
+            {
+              "plan": "Max 20x Plan 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "1300000",
+              "price_mmk": "1,300,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Grok",
+          "plans": [
+            {
+              "plan": "SuperGrok Lite 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "65000",
+              "price_mmk": "65,000 Ks"
+            },
+            {
+              "plan": "SuperGrok 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "195000",
+              "price_mmk": "195,000 Ks"
+            },
+            {
+              "plan": "SuperGrok Plus 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "650000",
+              "price_mmk": "650,000 Ks"
+            },
+            {
+              "plan": "SuperGrok Heavy 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "1950000",
+              "price_mmk": "1,950,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Perplexity",
+          "plans": [
+            {
+              "plan": "Pro 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "130000",
+              "price_mmk": "130,000 Ks"
+            },
+            {
+              "plan": "Max 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "1300000",
+              "price_mmk": "1,300,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Suno",
+          "plans": [
+            {
+              "plan": "Pro 1 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "65000",
+              "price_mmk": "65,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Cursor",
+          "plans": [
+            {
+              "plan": "Pro 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "130000",
+              "mmk": "130000",
+              "price_mmk": "130,000 Ks"
+            },
+            {
+              "plan": "Pro + 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "390000",
+              "price_mmk": "390,000 Ks"
+            },
+            {
+              "plan": "Ultra 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "1300000",
+              "price_mmk": "1,300,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Quillbot",
+          "plans": [
+            {
+              "plan": "Premium 3 month 1 device",
+              "type": "notofficial",
+              "usd": "",
+              "mmk": "40000",
+              "price_mmk": "40,000 Ks"
+            },
+            {
+              "plan": "Premium 3 month 1 device",
+              "type": "notofficial",
+              "usd": "",
+              "mmk": "60000",
+              "price_mmk": "60,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Manus",
+          "plans": [
+            {
+              "plan": "Standard 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "130000",
+              "price_mmk": "130,000 Ks"
+            },
+            {
+              "plan": "There are other plan - dm to admin for price",
+              "type": "fix",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Gamma",
+          "plans": [
+            {
+              "plan": "Plus",
+              "type": "fix",
+              "usd": "",
+              "mmk": "78000",
+              "price_mmk": "78,000 Ks"
+            },
+            {
+              "plan": "Pro",
+              "type": "fix",
+              "usd": "",
+              "mmk": "165000",
+              "price_mmk": "165,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Kling AI",
+          "plans": [
+            {
+              "plan": "Standard",
+              "type": "fix",
+              "usd": "",
+              "mmk": "65000",
+              "price_mmk": "65,000 Ks"
+            },
+            {
+              "plan": "Pro",
+              "type": "fix",
+              "usd": "",
+              "mmk": "180000",
+              "price_mmk": "180,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Notion",
+          "plans": [
+            {
+              "plan": "Dm admin for price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Freepik",
+          "plans": [
+            {
+              "plan": "Premium",
+              "type": "fix",
+              "usd": "",
+              "mmk": "115000",
+              "price_mmk": "115,000 Ks"
+            },
+            {
+              "plan": "Premium+",
+              "type": "fix",
+              "usd": "",
+              "mmk": "260000",
+              "price_mmk": "260,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "GitHub Copilot",
+          "plans": [
+            {
+              "plan": "Dm to admin for price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Higgsfield",
+          "plans": [
+            {
+              "plan": "Starter ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "99000",
+              "price_mmk": "99,000 Ks"
+            },
+            {
+              "plan": "Pro",
+              "type": "fix",
+              "usd": "",
+              "mmk": "325000",
+              "price_mmk": "325,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Runway",
+          "plans": [
+            {
+              "plan": "Standard",
+              "type": "fix",
+              "usd": "",
+              "mmk": "99000",
+              "price_mmk": "99,000 Ks"
+            },
+            {
+              "plan": "Pro",
+              "type": "fix",
+              "usd": "",
+              "mmk": "195000",
+              "price_mmk": "195,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "HeyGen",
+          "plans": [
+            {
+              "plan": "Creator",
+              "type": "fix",
+              "usd": "",
+              "mmk": "195000",
+              "price_mmk": "195,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Midjourney",
+          "plans": [
+            {
+              "plan": "Basic",
+              "type": "fix",
+              "usd": "",
+              "mmk": "65000",
+              "price_mmk": "65,000 Ks"
+            },
+            {
+              "plan": "Standard",
+              "type": "fix",
+              "usd": "",
+              "mmk": "195000",
+              "price_mmk": "195,000 Ks"
+            },
+            {
+              "plan": "There are other plan and Dm to admin for other plan price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "API (ChatGPT , Gemini , Claude , .... )",
+          "plans": [
+            {
+              "plan": "1 USD Rate",
+              "type": "fix",
+              "usd": "",
+              "mmk": "6500",
+              "price_mmk": "6,500 Ks"
+            },
+            {
+              "plan": "Over 100 USD Rate",
+              "type": "fix",
+              "usd": "",
+              "mmk": "6000",
+              "price_mmk": "6,000 Ks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Streaming & Music",
+      "products": [
+        {
+          "name": "Spotify",
+          "plans": [
+            {
+              "plan": "Individual 1m (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "16000",
+              "price_mmk": "16,000 Ks"
+            },
+            {
+              "plan": "Individual 2m (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "32000",
+              "price_mmk": "32,000 Ks"
+            },
+            {
+              "plan": "Family (1 slot) 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "9000",
+              "price_mmk": "9,000 Ks"
+            },
+            {
+              "plan": "Individual 3m (Own Mail)",
+              "type": "fix",
+              "usd": "48000",
+              "mmk": "48000",
+              "price_mmk": "48,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Netflix",
+          "plans": [
+            {
+              "plan": "1 month (Phone/Laptop) - Myanmar Region",
+              "type": "fix",
+              "usd": "",
+              "mmk": "18000",
+              "price_mmk": "18,000 Ks"
+            },
+            {
+              "plan": "1 month (TV) - Myanmar Region",
+              "type": "fix",
+              "usd": "",
+              "mmk": "19997",
+              "price_mmk": "19,997 Ks"
+            }
+          ]
+        },
+        {
+          "name": "YouTube Premium",
+          "plans": [
+            {
+              "plan": "Individual 1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "25000",
+              "price_mmk": "25,000 Ks"
+            },
+            {
+              "plan": "Individual 2 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "50000",
+              "price_mmk": "50,000 Ks"
+            },
+            {
+              "plan": "Individual 3 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "75000",
+              "price_mmk": "75,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Apple Music",
+          "plans": [
+            {
+              "plan": "Dm to admin for price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "HBO Max",
+          "plans": [
+            {
+              "plan": "Dm to admin for price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Prime Video",
+          "plans": [
+            {
+              "plan": "1 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "12000",
+              "price_mmk": "12,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Disney+",
+          "plans": [
+            {
+              "plan": "Dm to Admin For Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "iQIYI",
+          "plans": [
+            {
+              "plan": "Dm to Admin For Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Design & Creative",
+      "products": [
+        {
+          "name": "CapCut Pro",
+          "plans": [
+            {
+              "plan": "1 month (Provide Account) - Page ကနေအကောင့်ချပေးမယ် အဲ့တာကိုသုံးရမယ်",
+              "type": "notofficial",
+              "usd": "20000",
+              "mmk": "20000",
+              "price_mmk": "20,000 Ks"
+            },
+            {
+              "plan": "1 month Official Own Mail ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "30000",
+              "price_mmk": "30,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Canva Pro",
+          "plans": [
+            {
+              "plan": "1 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "25000",
+              "price_mmk": "25,000 Ks"
+            },
+            {
+              "plan": "3 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "50000",
+              "price_mmk": "50,000 Ks"
+            },
+            {
+              "plan": "6 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "100000",
+              "price_mmk": "100,000 Ks"
+            },
+            {
+              "plan": "12 month (Own Mail)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "125000",
+              "price_mmk": "125,000 Ks"
+            },
+            {
+              "plan": "Edu Pro 12 month  (Own Mail)",
+              "type": "notofficial",
+              "usd": "",
+              "mmk": "22000",
+              "price_mmk": "22,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Adobe Creative Cloud",
+          "plans": [
+            {
+              "plan": "1 month 1 device ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "55000",
+              "price_mmk": "55,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Figma",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Picsart",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Productivity & Software",
+      "products": [
+        {
+          "name": "Google Drive",
+          "plans": [
+            {
+              "plan": "Dm Admin For Price. Google One (Gemini Pro ဝယ်ရင်လည်း Google Device ပါပါမယ်))",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Zoom",
+          "plans": [
+            {
+              "plan": "Pro 1 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "25000",
+              "price_mmk": "25,000 Ks"
+            },
+            {
+              "plan": "Pro 2 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "50000",
+              "price_mmk": "50,000 Ks"
+            },
+            {
+              "plan": "Pro 3 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "75000",
+              "price_mmk": "75,000 Ks"
+            },
+            {
+              "plan": "Pro 6 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "140000",
+              "price_mmk": "140,000 Ks"
+            },
+            {
+              "plan": "Pro 12 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "270000",
+              "price_mmk": "270,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Telegram Premium",
+          "plans": [
+            {
+              "plan": "1 month (DM Admin for Price)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            },
+            {
+              "plan": "3 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "65000",
+              "price_mmk": "65,000 Ks"
+            },
+            {
+              "plan": "6 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "119000",
+              "price_mmk": "119,000 Ks"
+            },
+            {
+              "plan": "12 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "179000",
+              "price_mmk": "179,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Microsoft 365",
+          "plans": [
+            {
+              "plan": "Personal 12 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "74997",
+              "price_mmk": "74,997 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Windows Key",
+          "plans": [
+            {
+              "plan": "Dm Admin For Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "iCloud+",
+          "plans": [
+            {
+              "plan": "Dm Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "products": [
+        {
+          "name": "Duoling",
+          "plans": [
+            {
+              "plan": "Super 1 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "9000",
+              "price_mmk": "9,000 Ks"
+            },
+            {
+              "plan": "Super 3 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "23000",
+              "price_mmk": "23,000 Ks"
+            },
+            {
+              "plan": "Super 6 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "45000",
+              "price_mmk": "45,000 Ks"
+            },
+            {
+              "plan": "Super 12 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "85000",
+              "price_mmk": "85,000 Ks"
+            },
+            {
+              "plan": "Max 1 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "15000",
+              "price_mmk": "15,000 Ks"
+            },
+            {
+              "plan": "Max 3 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "40000",
+              "price_mmk": "40,000 Ks"
+            },
+            {
+              "plan": "Max 6 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "75000",
+              "price_mmk": "75,000 Ks"
+            },
+            {
+              "plan": "Max 12 month",
+              "type": "fix",
+              "usd": "",
+              "mmk": "145000",
+              "price_mmk": "145,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "Grammarly",
+          "plans": [
+            {
+              "plan": "Premium 1 month ",
+              "type": "fix",
+              "usd": "",
+              "mmk": "30000",
+              "price_mmk": "30,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "LinkedIn Premium",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Coursera Plus",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Scribd",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Turnitin",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Udemy",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VPN",
+      "products": [
+        {
+          "name": "ExpressVPN",
+          "plans": [
+            {
+              "plan": "1 month 1 device (Phone)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "8000",
+              "price_mmk": "8,000 Ks"
+            },
+            {
+              "plan": "1 month 1 device (Laptop)",
+              "type": "fix",
+              "usd": "",
+              "mmk": "9000",
+              "price_mmk": "9,000 Ks"
+            }
+          ]
+        },
+        {
+          "name": "VPN Key (Use For Hiddify, Happ, V2ray) - if customer ask Outline VPN, u can say outline is not available, but try this. this vpn good for myanmar. same like outline vpn",
+          "plans": [
+            {
+              "plan": "1 month 1 device 100 GB",
+              "type": "fix",
+              "usd": "",
+              "mmk": "9000",
+              "price_mmk": "9,000 Ks"
+            },
+            {
+              "plan": "1 month 2 device 200 GB",
+              "type": "fix",
+              "usd": "",
+              "mmk": "18000",
+              "price_mmk": "18,000 Ks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "products": [
+        {
+          "name": "Discord Nitro",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Steam Wallet",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "PlayStation Plus",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        },
+        {
+          "name": "Game Top-up",
+          "plans": [
+            {
+              "plan": "DM Admin for Price",
+              "type": "official",
+              "usd": "",
+              "mmk": "",
+              "price_mmk": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
