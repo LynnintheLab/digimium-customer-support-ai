@@ -1,6 +1,7 @@
 project_id = "nrbvowuozpbforgibdpq"
 
-[functions.telegram-bot]
-enabled = true
+[functions.conversation-admin-api]
 verify_jwt = false
-entrypoint = "./functions/telegram-bot/index.ts"
+
+[functions.conversation-admin-bot]
+verify_jwt = false
