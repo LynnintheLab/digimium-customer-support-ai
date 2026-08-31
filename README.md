@@ -86,6 +86,7 @@ digimium-bot-project/
 │   ├── security-migration.sql        <- harden an existing database
 │   ├── response-format-migration.sql <- plain-text product list formatting
 │   ├── support-topics-migration.sql  <- group topics, relay, review, scheduler
+│   ├── delete-topic-migration.sql    <- deletion audit + retained topic mapping
 │   └── approved-knowledge-migration.sql <- approved 51-product knowledge
 ├── supabase/
 │   ├── config.toml                   <- Supabase function config (verify_jwt=false)

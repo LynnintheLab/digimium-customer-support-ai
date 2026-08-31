@@ -32,6 +32,8 @@ type TopicContext = {
   summary_due_at: string | null;
   last_summarized_message_id: number | null;
   last_summary_at: string | null;
+  deleted_at: string | null;
+  deleted_by_telegram_id: number | null;
 };
 
 type SupportGroup = {
@@ -386,7 +388,7 @@ async function ensureCustomerTopic(
     .from("customer_topics").select("*").eq("customer_id", customer.id)
     .maybeSingle();
   if (existingError) throw existingError;
-  if (existing) return existing as TopicContext;
+  if (existing && !existing.deleted_at) return existing as TopicContext;
 
   const created = await tgCall("createForumTopic", {
     chat_id: group.telegram_chat_id,
@@ -398,8 +400,11 @@ async function ensureCustomerTopic(
     support_group_id: group.id,
     message_thread_id: created.message_thread_id,
     mode: "hybrid",
+    handoff_active: false,
     last_activity_at: now,
     summary_due_at: new Date(Date.now() + 30 * 60 * 1000).toISOString(),
+    deleted_at: null,
+    deleted_by_telegram_id: null,
     updated_at: now,
   }, { onConflict: "customer_id" }).select().single();
   if (error || !data) throw error ?? new Error("Could not save customer topic");
@@ -858,6 +863,100 @@ async function closeHandoff(group: SupportGroup, topicRow: any) {
   );
 }
 
+function deleteTopicKeyboard(topicRow: any): Record<string, unknown> {
+  return {
+    inline_keyboard: [[
+      {
+        text: "🗑 Yes, summarize & delete",
+        callback_data:
+          `td:y:${topicRow.customer_id}:${topicRow.message_thread_id}`,
+      },
+      {
+        text: "Cancel",
+        callback_data:
+          `td:n:${topicRow.customer_id}:${topicRow.message_thread_id}`,
+      },
+    ]],
+  };
+}
+
+async function summarizeAndDeleteTopic(
+  group: SupportGroup,
+  topicRow: any,
+  adminId: number,
+) {
+  const summaryResult = await summarizeConversation(
+    topicRow,
+    "manual",
+    adminId,
+    false,
+  );
+  const deletedAt = new Date().toISOString();
+  const { error: markError } = await supabase.from("customer_topics").update({
+    deleted_at: deletedAt,
+    deleted_by_telegram_id: adminId,
+    summary_due_at: null,
+    handoff_active: false,
+    updated_at: deletedAt,
+  }).eq("customer_id", topicRow.customer_id)
+    .eq("message_thread_id", topicRow.message_thread_id);
+  if (markError) throw markError;
+
+  try {
+    await tgCall("deleteForumTopic", {
+      chat_id: group.telegram_chat_id,
+      message_thread_id: topicRow.message_thread_id,
+    });
+  } catch (error) {
+    const { error: restoreError } = await supabase.from("customer_topics")
+      .update({
+        deleted_at: null,
+        deleted_by_telegram_id: null,
+        summary_due_at: new Date(Date.now() + 30 * 60 * 1000).toISOString(),
+        updated_at: new Date().toISOString(),
+      }).eq("customer_id", topicRow.customer_id);
+    if (restoreError) {
+      console.error("Could not restore topic mapping", restoreError);
+    }
+    throw error;
+  }
+
+  const { error: auditError } = await supabase.from("deleted_customer_topics")
+    .insert({
+      customer_id: topicRow.customer_id,
+      support_group_id: topicRow.support_group_id,
+      message_thread_id: topicRow.message_thread_id,
+      deleted_by_telegram_id: adminId,
+      deleted_at: deletedAt,
+    });
+  if (auditError) {
+    console.error("Could not write topic deletion audit", auditError);
+  }
+
+  if (group.logs_topic_id) {
+    const customer = topicRow.customers;
+    const who = customer?.username
+      ? `@${customer.username}`
+      : (customer?.name || `Customer ${topicRow.customer_id}`);
+    try {
+      await sendTopicText(
+        group,
+        group.logs_topic_id,
+        [
+          "🗑 Customer Topic deleted",
+          `Customer: ${who}`,
+          summaryResult.created
+            ? "Conversation ကို summarize လုပ်ပြီး database မှာသိမ်းထားပါတယ်။"
+            : "Message အသစ်မရှိလို့ summary အသစ်မလိုပါ။ Database history မဖျက်ပါ။",
+          "Customer နောက်တစ်ခါစာပို့ရင် Topic အသစ်ပြန်ဆောက်ပါမယ်။",
+        ].join("\n"),
+      );
+    } catch (error) {
+      console.error("Could not send topic deletion log", error);
+    }
+  }
+}
+
 async function relayAdminMessage(group: SupportGroup, topicRow: any, msg: any) {
   const customer = topicRow.customers;
   if (!customer?.telegram_id) {
@@ -1122,6 +1221,7 @@ async function summarizeConversation(
   topicRow: any,
   triggerType: "manual" | "inactivity",
   adminId: number | null,
+  announceInCustomerTopic = true,
 ): Promise<{ created: boolean; candidateId?: number; summary?: string }> {
   let query = supabase.from("messages")
     .select("id,role,source,content,created_at")
@@ -1234,7 +1334,7 @@ async function summarizeConversation(
   }
 
   const group = await getSupportGroup();
-  if (group) {
+  if (group && announceInCustomerTopic) {
     await sendTopicText(
       group,
       topicRow.message_thread_id,
@@ -1332,6 +1432,19 @@ async function handleGroupMessage(msg: any): Promise<boolean> {
       await closeHandoff(group, topicRow);
       return false;
     }
+    if (command.name === "deletetopic") {
+      await sendTopicText(
+        group,
+        topicRow.message_thread_id,
+        [
+          "⚠️ ဒီ Telegram Topic နဲ့ Topic ထဲက message တွေကို အပြီးဖျက်ပါမယ်။",
+          "မဖျက်ခင် conversation ကို summarize လုပ်ပြီး database မှာ customer, messages, summary အားလုံးဆက်သိမ်းထားပါမယ်။",
+          "Customer နောက်တစ်ခါစာပို့ရင် Topic အသစ်ပြန်ဆောက်ပါမယ်။",
+        ].join("\n\n"),
+        { replyMarkup: deleteTopicKeyboard(topicRow) },
+      );
+      return false;
+    }
     if (command.name === "summarize" || command.name === "summerize") {
       const result = await summarizeConversation(
         topicRow,
@@ -1377,6 +1490,7 @@ async function handleGroupMessage(msg: any): Promise<boolean> {
           "/auto or /resumeai - Hybrid AI mode",
           "/summarize or /summerize - Summary + knowledge candidate",
           "/close - Resolve handoff; topic stays open",
+          "/deletetopic - Summarize, then permanently delete this Telegram topic",
           "/status - Current mode",
           "/note text - Internal note; not sent to customer",
           "ပုံမှန်စာနဲ့ media တွေကို customer ဆီ တိုက်ရိုက်ပို့ပါမယ်။",
@@ -1398,8 +1512,8 @@ async function handleGroupMessage(msg: any): Promise<boolean> {
 
 async function handleCallbackQuery(callback: any) {
   const message = callback.message;
-  const match = String(callback.data ?? "").match(/^kr:([aexd]):(\d+)$/);
-  if (!message || !match) return;
+  const callbackData = String(callback.data ?? "");
+  if (!message) return;
   const group = await getSupportGroup();
   if (!group || Number(message.chat?.id) !== Number(group.telegram_chat_id)) {
     return;
@@ -1415,8 +1529,58 @@ async function handleCallbackQuery(callback: any) {
     });
     return;
   }
-  const action = match[1];
-  const candidateId = Number(match[2]);
+
+  const topicDeleteMatch = callbackData.match(/^td:([yn]):(\d+):(\d+)$/);
+  if (topicDeleteMatch) {
+    const shouldDelete = topicDeleteMatch[1] === "y";
+    const customerId = Number(topicDeleteMatch[2]);
+    const threadId = Number(topicDeleteMatch[3]);
+    if (!shouldDelete) {
+      await tgCall("answerCallbackQuery", {
+        callback_query_id: callback.id,
+        text: "Topic deletion cancelled",
+      });
+      await tgCall("editMessageText", {
+        chat_id: group.telegram_chat_id,
+        message_id: message.message_id,
+        text: "✅ Topic delete လုပ်တာကို Cancel လုပ်ပြီးပါပြီ။",
+      });
+      return;
+    }
+
+    const topicRow = await getTopicWithCustomer(group.id, threadId);
+    if (
+      !topicRow || topicRow.deleted_at ||
+      Number(topicRow.customer_id) !== customerId
+    ) {
+      await tgCall("answerCallbackQuery", {
+        callback_query_id: callback.id,
+        text: "ဒီ Topic ကို ဖျက်ပြီးသား သို့မဟုတ် mapping မရှိတော့ပါ။",
+        show_alert: true,
+      });
+      return;
+    }
+    await tgCall("answerCallbackQuery", {
+      callback_query_id: callback.id,
+      text: "Summarizing, then deleting topic...",
+    });
+    try {
+      await summarizeAndDeleteTopic(group, topicRow, callback.from.id);
+    } catch (error) {
+      console.error("Topic deletion failed", error);
+      await sendTopicText(
+        group,
+        threadId,
+        "❌ Summary သို့မဟုတ် Topic delete မအောင်မြင်ပါ။ Topic ကိုမဖျက်ထားပါ။ ပြန်စမ်းနိုင်ပါတယ်။",
+      );
+    }
+    return;
+  }
+
+  const knowledgeMatch = callbackData.match(/^kr:([aexd]):(\d+)$/);
+  if (!knowledgeMatch) return;
+  const action = knowledgeMatch[1];
+  const candidateId = Number(knowledgeMatch[2]);
   if (action === "e") {
     await tgCall("answerCallbackQuery", {
       callback_query_id: callback.id,

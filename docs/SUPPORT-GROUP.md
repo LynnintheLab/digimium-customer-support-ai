@@ -37,6 +37,11 @@ sent. Bot command messages are never relayed.
   summary and extract reusable facts specifically confirmed by an admin.
 - `/close` — resolve the handoff and return to hybrid mode. It deliberately
   leaves the Telegram topic open.
+- `/deletetopic` — show a confirmation button, summarize any new conversation,
+  then permanently delete the Telegram topic and its Telegram messages. The
+  customer, messages, summary, learned candidate, and deletion audit remain in
+  the database. If summary creation fails, deletion is cancelled. The next
+  customer message creates a fresh topic.
 - `/status` — show current mode and handoff state.
 - `/note text` — keep the message inside the admin group.
 - `/help` — show the topic command list.

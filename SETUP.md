@@ -21,6 +21,8 @@ For the private support-group workflow, also run
 `db/support-topics-migration.sql`. It creates the topic mappings, admin modes,
 conversation summaries, reviewed-knowledge queue, duplicate-update guard, and
 the five-minute scheduler that finds conversations inactive for 30 minutes.
+Then run `db/delete-topic-migration.sql` to enable safely confirmed topic
+deletion with retained database history and an audit log.
 
 ---
 
