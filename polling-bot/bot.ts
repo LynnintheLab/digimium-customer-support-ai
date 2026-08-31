@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 // Digimium Telegram Support Bot - long-polling fallback.
 // Run exactly one instance on a true always-on worker. Do not run this while
 // the webhook is active, and do not use a scale-to-zero/serverless host.
@@ -34,9 +35,18 @@ function delay(ms: number) {
 }
 
 const VIDEO_LIST_CLOSING = "ဘယ်တစ်ခု အသေးစိတ် သိချင်ပါသလဲခင်ဗျာ။";
-const VIDEO_PRODUCTS = ["Kling AI", "Runway", "HeyGen", "Higgsfield", "CapCut Pro"];
+const VIDEO_PRODUCTS = [
+  "Kling AI",
+  "Runway",
+  "HeyGen",
+  "Higgsfield",
+  "CapCut Pro",
+];
 
-function formatBroadVideoList(question: string, generatedReply: string): string {
+function formatBroadVideoList(
+  question: string,
+  generatedReply: string,
+): string {
   const normalizedQuestion = question.toLowerCase();
   const mentionsVideo = normalizedQuestion.includes("video") ||
     question.includes("ဗီဒီယို");
@@ -46,7 +56,9 @@ function formatBroadVideoList(question: string, generatedReply: string): string 
   const namesSpecificProduct = VIDEO_PRODUCTS.some((product) =>
     normalizedQuestion.includes(product.toLowerCase())
   );
-  if (!mentionsVideo || !asksForOptions || namesSpecificProduct) return generatedReply;
+  if (!mentionsVideo || !asksForOptions || namesSpecificProduct) {
+    return generatedReply;
+  }
 
   const blocks = new Map<string, string[]>();
   let currentProduct: string | null = null;
@@ -224,8 +236,15 @@ async function geminiGenerateWithFallback(
   models: string[],
   payload: Record<string, unknown>,
 ): Promise<{ ok: boolean; status: number; data: any; model: string }> {
-  const candidates = [...new Set(models.map((model) => model.trim()).filter(Boolean))];
-  let lastResult = { ok: false, status: 0, data: {} as any, model: candidates[0] ?? "" };
+  const candidates = [
+    ...new Set(models.map((model) => model.trim()).filter(Boolean)),
+  ];
+  let lastResult = {
+    ok: false,
+    status: 0,
+    data: {} as any,
+    model: candidates[0] ?? "",
+  };
 
   for (const model of candidates) {
     const result = await geminiGenerate(model, payload);
@@ -368,8 +387,20 @@ async function handle(msg: any) {
   await sb("messages", {
     method: "POST",
     body: JSON.stringify([
-      { customer_id: customer.id, role: "user", content: text },
-      { customer_id: customer.id, role: "model", content: reply },
+      {
+        customer_id: customer.id,
+        role: "user",
+        source: "customer",
+        content: text,
+        telegram_message_id: msg.message_id,
+        telegram_author_id: msg.from?.id ?? null,
+      },
+      {
+        customer_id: customer.id,
+        role: "model",
+        source: "bot",
+        content: reply,
+      },
     ]),
   });
   await sb("usage?on_conflict=customer_id%2Cday", {

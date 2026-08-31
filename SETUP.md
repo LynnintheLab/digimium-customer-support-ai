@@ -17,6 +17,11 @@ policies into the `settings` table. For an existing installation, run
 anonymous/authenticated access. (This migration has already been applied to
 the live project.)
 
+For the private support-group workflow, also run
+`db/support-topics-migration.sql`. It creates the topic mappings, admin modes,
+conversation summaries, reviewed-knowledge queue, duplicate-update guard, and
+the five-minute scheduler that finds conversations inactive for 30 minutes.
+
 ---
 
 ## OPTION A - Webhook on Supabase (serverless)
@@ -78,6 +83,14 @@ the live project.)
    `"ok":true`.
 
 9. Message the bot `/start`, then `ChatGPT Plus ဘယ်လောက်လဲ`.
+
+10. Register the private admin group:
+    - General topic: `/setup`
+    - Knowledge Review topic: `/setup knowledge`
+    - System Log topic: `/setup logs`
+
+The bot must be a group admin with Manage Topics, and human admins must have
+Remain Anonymous disabled. See `docs/SUPPORT-GROUP.md`.
 
 ---
 

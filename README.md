@@ -24,6 +24,11 @@ refunds, broken accounts, and unlisted prices.
 - When a customer needs a human (payment, refund, broken account, unlisted
   price), it tells them the team will help AND pings your Telegram (id 1506907137).
 - Logs every chat and every handoff to the database.
+- Creates one private admin-group topic per customer on their next message.
+- Mirrors customer and bot messages into that topic; an admin's normal topic
+  message is relayed directly to the customer.
+- Supports hybrid AI/admin handling, total handoff, manual or 30-minute
+  inactivity summaries, and owner-reviewed learned knowledge.
 
 ---
 
@@ -80,14 +85,17 @@ digimium-bot-project/
 │   ├── schema.sql                    <- run once for a new database
 │   ├── security-migration.sql        <- harden an existing database
 │   ├── response-format-migration.sql <- plain-text product list formatting
+│   ├── support-topics-migration.sql  <- group topics, relay, review, scheduler
 │   └── approved-knowledge-migration.sql <- approved 51-product knowledge
 ├── supabase/
 │   ├── config.toml                   <- Supabase function config (verify_jwt=false)
+│   ├── migrations/                   <- linked production migrations
 │   └── functions/telegram-bot/
 │       └── index.ts                  <- Option A: webhook Edge Function
 ├── polling-bot/
 │   └── bot.ts                        <- Option B: single-worker fallback
 └── docs/
+    ├── SUPPORT-GROUP.md              <- admin group setup and commands
     ├── digimium_kb.json              <- older compact export
     ├── digimium_full_prices.json     <- full price-editor export
     ├── digimium_approved_knowledge.json <- current owner-approved source
@@ -145,6 +153,22 @@ database migration, and new-install seed.
 ## See customers / chats / handoffs
 
 Supabase -> Table Editor -> `customers`, `messages`, `handoffs`, `usage`.
+The topic workflow additionally uses `support_groups`, `customer_topics`,
+`conversation_summaries`, and `knowledge_candidates`.
+
+## Admin support group
+
+Create a private Telegram supergroup with Topics enabled, add the customer bot
+as an administrator with Manage Topics, and keep anonymous-admin mode off. Then
+register it from Telegram:
+
+1. General topic: `/setup`
+2. Knowledge Review topic: `/setup knowledge`
+3. System Log topic: `/setup logs`
+
+See `docs/SUPPORT-GROUP.md` for the relay rules, commands, review buttons, and
+safe operating details. The polling fallback is intentionally legacy-only and
+does not implement this group workflow; production must remain on the webhook.
 
 ## Cost
 
