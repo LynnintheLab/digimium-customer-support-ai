@@ -1,0 +1,3000 @@
+{
+  "schemaVersion": "1.0",
+  "researchDate": "2026-08-31",
+  "exportedAt": "2026-08-31T05:55:50.432Z",
+  "approvalRule": "Only owner-approved products are included.",
+  "products": [
+    {
+      "id": "chatgpt",
+      "product": "ChatGPT",
+      "category": "AI Tools",
+      "freeVsPaid": "Free က အခြေခံ chat, web search, file/image tools ကို limit နဲ့သုံးနိုင်ပါတယ်။ Paid plan မြင့်လာတာနဲ့ model/tool usage, deep research, image/video generation နဲ့ agent features limit ပိုများလာပြီး Business မှာ workspace admin နှင့် business data protection ပါဝင်လာပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "အခြေခံ model နှင့် tools ကို ကန့်သတ်အသုံးပြုနိုင်",
+          "bestFor": "စမ်းသုံးခြင်း၊ နေ့စဉ်မေးခွန်းတို",
+          "limits": "Message, upload, image နှင့် advanced tool limits နည်း"
+        },
+        {
+          "name": "Go",
+          "difference": "Free ထက် message, upload, image နှင့် memory ပိုများသော တန်ဖိုးသက်သာ plan\nပုံထုတ်ရင် တစ်နေ့ကို ၃၀ - ၄၀ လောက်ထုတ်လို့ရပါမယ်\nပုံ upload တာလည်း Free ထပ်ပိုပြီးအများကြီးရပါမယ်\nCodex သုံးမယ်ဆိုလည်း အဆင်ပြေပါတယ်\nကိုယ်ပိုင် Mail ကိုယ်ပိုင်အကောင့်နဲ့ လတိုင်းသုံးလို့ရမယ်",
+          "bestFor": "စာလုပ်မယ်၊ နေ့စဥ်အလုပ်လုပ်မယ် ၊ မသိတာတွေမေးမယ် ၊ ပုံတွေထုတ်မယ်",
+          "limits": "Plus ထက် advanced reasoning နှင့် agent limits နည်းနိုင်\nModel ရွေးလို့မရ \n(လူတိုင်းအတွက်မလို)"
+        },
+        {
+          "name": "Plus",
+          "difference": "Reasoning models, deep research, projects, tasks, custom GPTs နှင့် tools ပိုများ\nပုံထုတ်မယ်ဆိုရင် တစ်နေ့ကို ၈၀ - ၁၀၀ လောက်ထိရပါတယ်\nCodex usage Limit လည်းအများကြီးဖြစ်သွားမယ်",
+          "bestFor": "Programming လုပ်မယ့် Developer များ၊ နေ့စဥ်အလုပ်မှာ အသုံးများပြီးတော့ Agentic Work Flow သုံးချင်တဲ့သူတွေအတွက်ပိုကောင်းတယ်",
+          "limits": "Usage caps ရှိပြီး traffic အလိုက်ပြောင်းနိုင်\nတော်ရုံနဲ့ Limit မဖြစ် "
+        },
+        {
+          "name": "Pro",
+          "difference": "Individual အတွက် အမြင့်ဆုံး access; reasoning, research, agent နှင့် media tools limit အများဆုံး",
+          "bestFor": "Power user နှင့် professional workflow",
+          "limits": "စျေးမြင့်ပြီး unlimited ဆိုသော်လည်း abuse guardrails ရှိ"
+        },
+        {
+          "name": "Business",
+          "difference": "Plus/Pro-class tools ကို managed workspace, admin controls, SSO နှင့် business data ကို training မသုံးသည့် policy ဖြင့်ပေး\nPro Model တွေအားလုံးကိုသုံးလို့ရပါမယ်\n",
+          "bestFor": "အသင်းနှင့် ကုမ္ပဏီ",
+          "limits": "Seat အလိုက်ဝယ်ရပြီး minimum-seat/region စည်းကမ်းများပြောင်းနိုင်\n1 seat - 150,000 Ks ဖြစ်ပါတယ်\n၁ လစာပါ။ Seat နဲ့မဟုတ်ဘဲ Company သုံးဖို့ Seat အများကြီးဆိုလည်းရပါတယ်။ ပိုပြီးဈေးသက်သာပါမယ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Go · 1 month · own mail",
+          "price": "55,000 Ks"
+        },
+        {
+          "plan": "Plus · 1 month",
+          "price": "130,000 Ks"
+        },
+        {
+          "plan": "Pro 5×",
+          "price": "650,000 Ks"
+        },
+        {
+          "plan": "Pro 20×",
+          "price": "1,300,000 Ks"
+        },
+        {
+          "plan": "Business Pro",
+          "price": "150,000 Ks"
+        },
+        {
+          "plan": "Go Share · 1 month · 1 device",
+          "price": "18,000 Ks"
+        },
+        {
+          "plan": "Plus Share · 1 month · 1 device",
+          "price": "45,000 Ks"
+        }
+      ],
+      "strengths": [
+        "General-purpose reasoning ကောင်း",
+        "File, image, web, coding စသည့် multimodal tools များ"
+      ],
+      "limitations": [
+        "Answer မှားနိုင်သဖြင့် အရေးကြီးအချက်များ verify လုပ်ရ",
+        "Plan limits နှင့် feature availability မကြာခဏပြောင်းနိုင်"
+      ],
+      "ownerNotes": [
+        "GoShare-18000နဲ့PlusShare-45000ကိုထပ်ထည့်လိုက်ပါ။Shareကသူများနဲ့တွဲသုံးရမယ်။1deviceပဲသုံးလို့ရမယ်။Privacyစိတ်မချရဘူး။နည်းနည်းပဲသုံးချင်တဲ့သူတွေ၊Budgetချွေတာချင်တဲ့သူတွေအတွက်အရမ်းအဆင်ပြေမယ့်Planပါ။2deviceဆိုရင်ဈေးပိုပါမယ်။အခုဈေးကတော့1device၁လစာဈေးပါ"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI pricing",
+          "url": "https://openai.com/chatgpt/pricing/"
+        },
+        {
+          "label": "ChatGPT Go help",
+          "url": "https://help.openai.com/en/articles/11989085-chatgpt-go"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "gemini",
+      "product": "Gemini / Google AI",
+      "category": "AI Tools",
+      "freeVsPaid": "Free မှာ Gemini model, search-style help နှင့် Google app integrations အချို့ကို limit နဲ့ရပါတယ်။ Paid Google AI plans က model access, AI credits, NotebookLM, Flow နှင့် storage ကို tier အလိုက်တိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Gemini ကို အခြေခံ limit နှင့်အသုံးပြုနိုင်",
+          "bestFor": "ပေါ့ပါးသော chat နှင့် Google ecosystem စမ်းသုံးရန်",
+          "limits": "Advanced model, video, research limits နည်း"
+        },
+        {
+          "name": "Google AI Pro",
+          "difference": "Expanded Gemini, NotebookLM, Flow/Whisk နှင့် Google app AI; storage ပါ\nGemini Pro - advanced model တွေအားလုံးသုံးလို့ရမယ်။\nNotebook LM Pro သုံးလို့ရပါမယ်။\nFlow AI Credit 1 လ ကို 1000 ပါလို့ ၁ လကို 10 sec စာ video တွေကို 150 လောက်ထိထုတ်လို့ရမယ်။\nထုတ်တဲ့ Video တွေပေါင်းပြီး Video အရှည်တွေလုပ်လို့ရမယ်။\nVideo ထုတ်ရင် မြန်မာအသံထွက်၊ မြန်မာစာမှန်တဲ့ ၁ ခုတည်းသော AI က Gemini ပါပဲ။\nGoogle Drive 5TB လည်းပါပါဦးမယ်",
+          "bestFor": "Research, study, creative workflow",
+          "limits": ""
+        },
+        {
+          "name": "Google AI Ultra 5×",
+          "difference": "Pro ထက် model/AI credit access ပိုများပြီး advanced/early features ရ\nFlow Credit - 20000 ထိရပါမယ်\n4k Video တွေထုတ်လို့ရမယ်\nGoogle Drive 20TB ပါမယ်",
+          "bestFor": "Creator နှင့် heavy AI user",
+          "limits": ""
+        },
+        {
+          "name": "Google AI Ultra 20×",
+          "difference": "Pro ထက် model/AI credit access ပိုများပြီး advanced/early features ရ\nFlow Credit - 20000 ထိရပါမယ်\n4k Video တွေထုတ်လို့ရမယ်\nGoogle Drive 20TB ပါမယ်",
+          "bestFor": "အမြဲတမ်း heavy generation သုံးသူ",
+          "limits": ""
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Google AI Pro · 3 months + 1 free",
+          "price": "Owner price needed"
+        },
+        {
+          "plan": "Google AI Pro · 6 months + 2 free",
+          "price": "Owner price needed"
+        },
+        {
+          "plan": "Google AI Pro · 12 months + 3 free",
+          "price": "Owner price needed"
+        },
+        {
+          "plan": "Ultra 5×",
+          "price": "650,000 Ks"
+        },
+        {
+          "plan": "Ultra 20×",
+          "price": "1,300,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Google Search, Gmail, Docs, Drive ecosystem နဲ့အဆင်ပြေ",
+        "NotebookLM နှင့် long-context research ကောင်း"
+      ],
+      "limitations": [],
+      "ownerNotes": [
+        "GoogleAIPlusplanမထည့်ပါ။"
+      ],
+      "sources": [
+        {
+          "label": "Google AI plans",
+          "url": "https://one.google.com/about/google-ai-plans/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "claude",
+      "product": "Claude",
+      "category": "AI Tools",
+      "freeVsPaid": "Free က writing, analysis နှင့် coding ကို usage limit နဲ့ရပါတယ်။ Pro က usage နှင့် work tools တိုးပြီး Max 5×/20× က Pro ထက်ပိုမိုများသော usage နှင့် priority access ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Core Claude chat, files နှင့် coding ကို limit နဲ့ရ",
+          "bestFor": "စမ်းသုံးရန်နှင့် ပေါ့ပါးသောရေးသားမှု",
+          "limits": "Busy time နဲ့ long task တွင် limit မြန်တတ်"
+        },
+        {
+          "name": "Pro",
+          "difference": "Free ထက် usage ပိုများ၊ projects နှင့် Claude Code/Cowork features သုံးလို့ရမယ်\nOpus 5 Model သုံးလို့ရမယ်\nFable 5 ကိုသုံးချင်ရင် Credit ထည့်ပြီးသုံးလို့ရမယ်",
+          "bestFor": "နေ့စဥ် Professional သုံးလို့ရမယ်။ ၁၀ ယောက်မှာ ၈ ယောက်လောက်က Pro နဲ့ အဆင်ပြေပါတယ်။ ကျောင်းသားတွေ၊ Programmer၊ Developer ၊ Vibe Coder အားလုံးသုံးလို့ရပါတယ်။ Personal assistantance အနေနဲ့အရမ်းကောင်းပါတယ်",
+          "limits": "Session length နှင့် model demand အလိုက် cap ပြောင်း"
+        },
+        {
+          "name": "Max 5×",
+          "difference": "Pro usage ခန့်မှန်း 5 ဆ ပိုရမယ်\nPro မှာပါတဲ့ Features တွေ အကုန်လုံးသုံးလို့ရမယ်\nFable 5 ကို Creidt မထည့်ဘဲသုံးလို့ရမယ် \nအကန့်အသတ်တော့ရှိမယ်",
+          "bestFor": "Heavy coding နှင့် research",
+          "limits": "5× သည် fixed message count မဟုတ်"
+        },
+        {
+          "name": "Max 20×",
+          "difference": "Pro usage ခန့်မှန်း 20 ဆ၊ အမြင့်ဆုံး individual access\nPro နဲ့  5x က Feature တွေအကုန်ရမယ်\nFable 5 ကို အများကြီးသုံးလို့ရမယ်",
+          "bestFor": "အလွန်အသုံးများသော power user",
+          "limits": "စျေးမြင့်၊ safety/fair-use limits ဆက်ရှိ"
+        },
+        {
+          "name": "Team / Enterprise",
+          "difference": "Central billing, admin, security နှင့် collaboration",
+          "bestFor": "အဖွဲ့နှင့်ကုမ္ပဏီ",
+          "limits": "Custom/seat pricing"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro",
+          "price": "130,000 Ks"
+        },
+        {
+          "plan": "Max 5×",
+          "price": "650,000 Ks"
+        },
+        {
+          "plan": "Max 20×",
+          "price": "1,300,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Writing နှင့် long-document analysis ကောင်း",
+        "Claude Code ဖြင့် coding workflow ကောင်း"
+      ],
+      "limitations": [
+        "Usage meter ကို message အရေအတွက်တိတိကျကျမပြောနိုင်",
+        "Web/current facts ကို source ဖြင့်စစ်ရန်လို"
+      ],
+      "ownerNotes": [
+        "ကိုယ်ပိုင်Mailနဲ့ဝယ်ပေးလို့ရပါမယ်။သုံးမယ့်Mailပေးရပါမယ်ခင်ဗျ"
+      ],
+      "sources": [
+        {
+          "label": "Claude pricing",
+          "url": "https://claude.com/pricing"
+        },
+        {
+          "label": "Choose a Claude plan",
+          "url": "https://support.claude.com/en/articles/11049762-choose-a-claude-plan"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "grok",
+      "product": "Grok",
+      "category": "AI Tools",
+      "freeVsPaid": "Free က Grok ကို low limits နဲ့သုံးနိုင်ပါတယ်။ SuperGrok tier မြင့်လာတာနဲ့ reasoning, search, image/video နှင့် compute-heavy features အသုံးပြုခွင့် ပိုများလာပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "အခြေခံ Grok access",
+          "bestFor": "casual chat",
+          "limits": "Usage နှင့် advanced tools limit နည်း"
+        },
+        {
+          "name": "SuperGrok Lite",
+          "difference": "Entry paid tier; Free ထက် limits ပိုများ",
+          "bestFor": "budget user",
+          "limits": "Full SuperGrok ထက် compute/features နည်း"
+        },
+        {
+          "name": "SuperGrok",
+          "difference": "Reasoning, search နှင့် media limits တိုး",
+          "bestFor": "regular AI user",
+          "limits": "Exact quotas မကြာခဏပြောင်း"
+        },
+        {
+          "name": "SuperGrok Plus",
+          "difference": "SuperGrok ထက် priority နှင့် limits ပိုများ",
+          "bestFor": "heavy user",
+          "limits": "စျေးနှင့် quotas account အလိုက်စစ်ရန်"
+        },
+        {
+          "name": "SuperGrok Heavy",
+          "difference": "Consumer tier အမြင့်ဆုံး compute/access",
+          "bestFor": "maximum-use research",
+          "limits": "စျေးမြင့်၊ fair-use/safety limits ရှိ"
+        },
+        {
+          "name": "Business / Enterprise",
+          "difference": "Workspace, admin, security နှင့် organization deployment",
+          "bestFor": "အဖွဲ့အစည်း",
+          "limits": "Custom terms"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "SuperGrok Lite",
+          "price": "65,000 Ks"
+        },
+        {
+          "plan": "SuperGrok",
+          "price": "195,000 Ks"
+        },
+        {
+          "plan": "Plus",
+          "price": "650,000 Ks"
+        },
+        {
+          "plan": "Heavy",
+          "price": "1,950,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Real-time web/X context အားသာ",
+        "Reasoning နှင့် media tools တစ်နေရာတည်း"
+      ],
+      "limitations": [
+        "Plan quota တိတိကျကျ မတည်ငြိမ်",
+        "Source quality နှင့် answer accuracy ကိုစစ်ရန်လို"
+      ],
+      "ownerNotes": [
+        "ဆိုင်၏ Plus ကို official SuperGrok Plus ဟုတ်/မဟုတ် စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "xAI pricing",
+          "url": "https://x.ai/pricing"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": true
+    },
+    {
+      "id": "perplexity",
+      "product": "Perplexity",
+      "category": "AI Tools",
+      "freeVsPaid": "Free မှာ basic search များစွာသုံးနိုင်ပေမယ့် Pro searches, uploads နှင့် advanced models နည်းပါတယ်။ Pro/Max က research, model choice, file creation နှင့် limits တိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Basic answer engine နှင့် source links",
+          "bestFor": "quick web research",
+          "limits": "Pro searches/uploads/advanced models အနည်းငယ်သာ"
+        },
+        {
+          "name": "Pro",
+          "difference": "Advanced models, Research, image/file tools နှင့် daily limits ပိုများ",
+          "bestFor": "student, analyst, professional",
+          "limits": "Publisher source မှားနိုင်သဖြင့် citation ဖတ်ရန်လို"
+        },
+        {
+          "name": "Max",
+          "difference": "Pro ထက် advanced usage အများကြီးပိုများ၊ priority/support ပိုကောင်း",
+          "bestFor": "research power user",
+          "limits": "စျေးမြင့်ပြီး quotas ပြောင်းနိုင်"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "Admin, security, internal knowledge နှင့် organization controls",
+          "bestFor": "company use",
+          "limits": "Seat/custom terms"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro",
+          "price": "130,000 Ks"
+        },
+        {
+          "plan": "Max",
+          "price": "1,300,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Source citation မြန်",
+        "Model ရွေးချယ်ပြီး research လုပ်နိုင်"
+      ],
+      "limitations": [
+        "Citation ရှိတာနဲ့အမှန်ဟုမယူသင့်",
+        "Paywalled/current pages အချို့မဖတ်နိုင်"
+      ],
+      "ownerNotes": [],
+      "sources": [
+        {
+          "label": "Perplexity plan guide",
+          "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "suno",
+      "product": "Suno",
+      "category": "AI Audio",
+      "freeVsPaid": "Free မှာ နေ့စဉ် credits နှင့် non-commercial generation ရပါတယ်။ Paid က monthly credits, priority, advanced models/tools နှင့် paid period အတွင်းဖန်တီးသောသီချင်းများအတွက် commercial rights ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "50 daily credits ခန့်၊ shared queue နှင့် basic model",
+          "bestFor": "စမ်းသုံး၊ personal music",
+          "limits": "Commercial use မရ; credits မစု"
+        },
+        {
+          "name": "Pro",
+          "difference": "2,500 monthly credits ခန့်၊ priority, advanced tools နှင့် commercial rights",
+          "bestFor": "regular creator",
+          "limits": "Commercial rights က paid period အသစ်များအတွက်သာ"
+        },
+        {
+          "name": "Premier",
+          "difference": "10,000 monthly credits ခန့်၊ Studio နှင့်ပိုများသော creation capacity",
+          "bestFor": "high-volume musician",
+          "limits": "Credits မလွှဲယူ; all outputs အာမခံမဟုတ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro",
+          "price": "65,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Prompt မှ သီချင်းအပြည့်မြန်မြန်ထုတ်နိုင်",
+        "Paid plan မှာ commercial workflow ပိုရှင်း"
+      ],
+      "limitations": [
+        "Copyright/originality risk ကို ကိုယ်တိုင်စစ်ရ",
+        "Free-created song ကို နောက်မှ subscribe လုပ်ရုံဖြင့် commercial right မပြန်ရ"
+      ],
+      "ownerNotes": [],
+      "sources": [
+        {
+          "label": "Suno pricing",
+          "url": "https://suno.com/pricing"
+        },
+        {
+          "label": "Suno plan help",
+          "url": "https://help.suno.com/en/articles/2425729"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "cursor",
+      "product": "Cursor",
+      "category": "Coding AI",
+      "freeVsPaid": "Hobby Free က code completion နှင့် agent requests ကို limit နဲ့ရပါတယ်။ Pro, Pro+, Ultra တို့က agent usage နှင့် priority ကို 1×, 3×, 20× အဆင့်လိုက်တိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Hobby",
+          "difference": "Limited completions နှင့် agent requests",
+          "bestFor": "စမ်းသုံး၊ light coding",
+          "limits": "Fast/premium requests နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "Unlimited tab completions နှင့် baseline agent allowance",
+          "bestFor": "individual developer",
+          "limits": "Expensive models သုံးလျှင် allowance မြန်ကုန်"
+        },
+        {
+          "name": "Pro+",
+          "difference": "Pro ထက် agent usage 3× ခန့်",
+          "bestFor": "daily agent-heavy developer",
+          "limits": "Model mix အလိုက် actual usage ကွာ"
+        },
+        {
+          "name": "Ultra",
+          "difference": "Pro ထက် agent usage 20× ခန့်နှင့် priority",
+          "bestFor": "full-time AI-first developer",
+          "limits": "စျေးမြင့်; hard/fair-use limits ရှိနိုင်"
+        },
+        {
+          "name": "Teams / Enterprise",
+          "difference": "Central billing, privacy, SSO, admin နှင့် analytics",
+          "bestFor": "engineering team",
+          "limits": "Seat/custom pricing"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro",
+          "price": "130,000 Ks"
+        },
+        {
+          "plan": "Pro+",
+          "price": "390,000 Ks"
+        },
+        {
+          "plan": "Ultra",
+          "price": "1,300,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Codebase-aware agent workflow",
+        "Editor ထဲမှာ completion/chat/agent တစ်ခုပေါင်း"
+      ],
+      "limitations": [
+        "Generated code ကို test/review မလုပ်ဘဲမသုံးသင့်",
+        "Usage estimate က selected models ပေါ်မူတည်"
+      ],
+      "ownerNotes": [],
+      "sources": [
+        {
+          "label": "Cursor pricing",
+          "url": "https://cursor.com/pricing"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "quillbot",
+      "product": "QuillBot",
+      "category": "Writing AI",
+      "freeVsPaid": "Free က paraphraser modes နှင့် word limits နည်းပါတယ်။ Premium က unlimited paraphrasing, modes အားလုံးနှင့် grammar, plagiarism, summarizing tools ပိုကျယ်စေပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Limited words/modes ဖြင့် paraphrase နှင့် basic writing tools",
+          "bestFor": "စာတိုပြင်ဆင်ရန်",
+          "limits": "Word count, modes နှင့် advanced tools limit"
+        },
+        {
+          "name": "Premium",
+          "difference": "Unlimited paraphrasing, all modes, faster processing နှင့် premium writing checks",
+          "bestFor": "student/writer heavy use",
+          "limits": "Plagiarism/AI detection ကို final truth မယူသင့်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Premium · 3 months · 1 device",
+          "price": "40,000 Ks"
+        },
+        {
+          "plan": "Premium · 6 months · 1 device",
+          "price": "60,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Paraphrase mode မျိုးစုံ",
+        "Browser/writing workflow လွယ်"
+      ],
+      "limitations": [
+        "Meaning ပြောင်းသွားနိုင်",
+        "Detection နှင့် citation accuracy ကိုလက်ဖြင့်စစ်ရန်"
+      ],
+      "ownerNotes": [
+        "3month1device-40000ks|6month1device-60000ksအဖြစ်ပြောင်းလိုက်ပါ"
+      ],
+      "sources": [
+        {
+          "label": "QuillBot Premium",
+          "url": "https://quillbot.com/premium"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": true
+    },
+    {
+      "id": "manus",
+      "product": "Manus",
+      "category": "AI Agent",
+      "freeVsPaid": "Free က lightweight agent/model နှင့် credits နည်းပါတယ်။ Paid Pro/Team က full models, credits, parallel work, privacy/admin features တိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Manus Lite/entry access နှင့် limited credits",
+          "bestFor": "agent workflow စမ်းသုံးရန်",
+          "limits": "Complex task နှင့် parallel runs နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "Full models, monthly credits နှင့် advanced agent capability",
+          "bestFor": "individual automation user",
+          "limits": "Credit-based; complex tasks က ပိုကုန်"
+        },
+        {
+          "name": "Team",
+          "difference": "Pooled credits, collaboration, admin နှင့် privacy controls",
+          "bestFor": "အဖွဲ့",
+          "limits": "Seat/workspace terms ရှိ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Standard",
+          "price": "130,000 Ks"
+        },
+        {
+          "plan": "Other plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Multi-step task ကို ကိုယ်စားလုပ်နိုင်",
+        "Research နှင့် artifact production ကောင်း"
+      ],
+      "limitations": [
+        "Agent action ကို မစစ်ဘဲ external system တွင်မသုံးသင့်",
+        "Credit consumption ခန့်မှန်းခက်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်၏ Standard plan သည် လက်ရှိ official public plan name နဲ့မကိုက်; exact entitlement စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Manus membership pricing",
+          "url": "https://help.manus.im/en/articles/11711111-what-is-the-current-membership-pricing-for-manus"
+        },
+        {
+          "label": "Manus Team",
+          "url": "https://manus.im/team"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": true
+    },
+    {
+      "id": "gamma",
+      "product": "Gamma",
+      "category": "Presentation AI",
+      "freeVsPaid": "Free က basic AI generation, cards နှင့် Gamma branding ပါပါတယ်။ Plus/Pro/Ultra တက်လာလျှင် cards per prompt, AI model access, branding, analytics, custom domain နှင့် usage ပိုများပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Basic AI generation; prompt တစ်ခု 10 cards ခန့်; Gamma branding",
+          "bestFor": "စမ်းသုံးနှင့် deck တို",
+          "limits": "Brand removal/advanced models နည်း"
+        },
+        {
+          "name": "Plus",
+          "difference": "20 cards ခန့်၊ branding ဖယ်နိုင်၊ advanced images",
+          "bestFor": "regular solo creator",
+          "limits": "Pro analytics/domain မပါ"
+        },
+        {
+          "name": "Pro",
+          "difference": "60 cards ခန့်၊ custom branding/domain, analytics နှင့် API access",
+          "bestFor": "professional/marketing",
+          "limits": "Usage caps ရှိ"
+        },
+        {
+          "name": "Ultra",
+          "difference": "75 cards ခန့်၊ advanced models နှင့် usage အများဆုံး",
+          "bestFor": "high-volume studio",
+          "limits": "စျေးနှင့် exact limits ပြောင်းနိုင်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Plus",
+          "price": "78,000 Ks"
+        },
+        {
+          "plan": "Pro",
+          "price": "165,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Presentation/webpage မြန်မြန်ဖန်တီးနိုင်",
+        "Design skill နည်းသူအတွက်လွယ်"
+      ],
+      "limitations": [
+        "AI layout ကို manual polish လိုတတ်",
+        "Fact-check ကို Gamma မလုပ်ပေးနိုင်"
+      ],
+      "ownerNotes": [
+        "Bot setup flow ဟောင်းက Gamma ကို estimate/handoff လုပ်နေသေးသော်လည်း price file မှာ ဈေးရှိနေသည်"
+      ],
+      "sources": [
+        {
+          "label": "Gamma pricing",
+          "url": "https://gamma.app/pricing"
+        },
+        {
+          "label": "Gamma API access",
+          "url": "https://developers.gamma.app/get-started/access-and-pricing"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "kling",
+      "product": "Kling AI",
+      "category": "AI Video",
+      "freeVsPaid": "Free က trial credits နှင့် slower queue ဖြစ်တတ်ပါတယ်။ Standard, Pro နှင့်အထက် tier များက monthly credits, generation mode, concurrency နှင့် priority ကိုတိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Limited trial/daily credits နှင့် standard queue",
+          "bestFor": "စမ်းသုံးရန်",
+          "limits": "Slow queue, watermark/feature limits ဖြစ်နိုင်"
+        },
+        {
+          "name": "Standard",
+          "difference": "Entry paid monthly credits နှင့် faster generation",
+          "bestFor": "casual creator",
+          "limits": "Pro ထက် credits/concurrency နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "Standard ထက် credits, priority နှင့် professional modes ပိုများ",
+          "bestFor": "regular video creator",
+          "limits": "Generation တစ်ခုချင်း credit ကုန်"
+        },
+        {
+          "name": "Premier / higher tiers",
+          "difference": "High-volume credits နှင့် priority အများဆုံး",
+          "bestFor": "studio/high-volume use",
+          "limits": "Region/app version အလိုက် plan name ပြောင်းနိုင်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Standard",
+          "price": "65,000 Ks"
+        },
+        {
+          "plan": "Pro",
+          "price": "180,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Image-to-video motion ကောင်း",
+        "Cinematic video options များ"
+      ],
+      "limitations": [
+        "Credits နှင့် queue ကို demand အလိုက်ခံရ",
+        "Official membership page ကို automated verification မရ၍ checkout စစ်ရန်"
+      ],
+      "ownerNotes": [
+        "Exact credit counts နှင့် generation modes ကို ဝယ်မည့်နေ့တွင် owner စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Kling membership",
+          "url": "https://klingai.com/membership"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "notion",
+      "product": "Notion",
+      "category": "Productivity",
+      "freeVsPaid": "Free က individual notes/database အတွက်လုံလောက်သော်လည်း uploads, history, guests နှင့် AI ကန့်သတ်ပါတယ်။ Plus က team content တိုးပြီး Business က full AI, search, meeting notes နှင့် admin/security ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Individual workspace, basic databases/forms/sites",
+          "bestFor": "personal notes",
+          "limits": "Small upload, short history, AI trial"
+        },
+        {
+          "name": "Plus",
+          "difference": "Unlimited team content, larger files, longer history, more guests",
+          "bestFor": "small team",
+          "limits": "Full Notion AI မပါဝင်နိုင်"
+        },
+        {
+          "name": "Business",
+          "difference": "Notion AI/Agent, Enterprise Search, Meeting Notes, SAML, longer history",
+          "bestFor": "growing company",
+          "limits": "Seat cost ပိုများ"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "SCIM, audit log, advanced security, custom retention/support",
+          "bestFor": "large organization",
+          "limits": "Custom quote"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Notes, wiki, database နှင့် project workflow တစ်နေရာတည်း",
+        "Template ecosystem ကြီး"
+      ],
+      "limitations": [
+        "Offline/complex database workflow အချို့ကန့်သတ်",
+        "AI/data policy ကို workspace အလိုက်စစ်ရန်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "Notion pricing",
+          "url": "https://www.notion.com/pricing"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "freepik",
+      "product": "Freepik / Magnific",
+      "category": "Design & Creative",
+      "freeVsPaid": "Free က limited AI credits နှင့် free assets ရပါတယ်။ Paid tier မြင့်လာတာနဲ့ credits, premium stock, model access, queue priority နှင့် licensing access ပိုများပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Free assets နှင့် limited AI generations",
+          "bestFor": "စမ်းသုံးရန်",
+          "limits": "Premium stock/credits မရ"
+        },
+        {
+          "name": "Essential",
+          "difference": "Entry AI credits",
+          "bestFor": "light AI creation",
+          "limits": "Premium stock coverage နည်းနိုင်"
+        },
+        {
+          "name": "Premium",
+          "difference": "Premium stock နှင့် AI credits ပိုများ",
+          "bestFor": "designer/marketer",
+          "limits": "Credit-heavy models မြန်ကုန်"
+        },
+        {
+          "name": "Premium+",
+          "difference": "Premium ထက် credits, unlimited-eligible models နှင့် priority ပိုများ",
+          "bestFor": "frequent creator",
+          "limits": "Unlimited တွင် fair-use ပါ"
+        },
+        {
+          "name": "Pro",
+          "difference": "High-volume credits နှင့် professional access",
+          "bestFor": "studio/freelancer",
+          "limits": "Exact allowances ပြောင်းနိုင်"
+        },
+        {
+          "name": "Business / Enterprise",
+          "difference": "Team admin, shared assets, indemnification/support အဆင့်မြင့်",
+          "bestFor": "organization",
+          "limits": "Seat/custom terms"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Premium",
+          "price": "115,000 Ks"
+        },
+        {
+          "plan": "Premium+",
+          "price": "260,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Stock library နှင့် AI tools တစ်နေရာတည်း",
+        "Design production မြန်"
+      ],
+      "limitations": [
+        "Asset license ကို usage အလိုက်ဖတ်ရန်လို",
+        "Brand/plan naming လတ်တလောပြောင်းလဲနေ"
+      ],
+      "ownerNotes": [
+        "Freepik AI/Magnific branding ပြောင်းလဲမှုကြောင့် exact entitlement checkout စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Freepik pricing",
+          "url": "https://www.freepik.com/pricing"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "github-copilot",
+      "product": "GitHub Copilot",
+      "category": "Coding AI",
+      "freeVsPaid": "Free က monthly completions/chat requests ကန့်သတ်ပါတယ်။ Pro မှာ completions များနှင့် coding agent/model choice ရပြီး Pro+/Max က premium model requests ပိုများပါတယ်။ Business/Enterprise မှာ governance တိုးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "2,000 completions နှင့် limited chat requests ခန့်",
+          "bestFor": "စမ်းသုံး/light coding",
+          "limits": "Monthly cap နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "Unlimited standard completions, chat, agent/code review နှင့် premium requests",
+          "bestFor": "individual developer",
+          "limits": "Premium requests quota ရှိ"
+        },
+        {
+          "name": "Pro+",
+          "difference": "Pro ထက် premium models/requests ပိုများ",
+          "bestFor": "heavy individual",
+          "limits": "Quota ပြောင်းနိုင်"
+        },
+        {
+          "name": "Max",
+          "difference": "Individual premium usage/priority အမြင့်ဆုံး",
+          "bestFor": "AI-first developer",
+          "limits": "စျေးမြင့်"
+        },
+        {
+          "name": "Business",
+          "difference": "Organization policy, audit, IP/privacy controls",
+          "bestFor": "team",
+          "limits": "Seat billing"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "GitHub knowledge/customization နှင့် enterprise governance",
+          "bestFor": "large enterprise",
+          "limits": "Custom/seat terms"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "IDE/GitHub workflow နဲ့နီးစပ်",
+        "Completion, chat, review နှင့် agent ပေါင်းစပ်"
+      ],
+      "limitations": [
+        "Code security/correctness ကို developer review လို",
+        "Premium model requests က quota သုံး"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "GitHub Copilot plans",
+          "url": "https://github.com/features/copilot/plans"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "higgsfield",
+      "product": "Higgsfield",
+      "category": "AI Video",
+      "freeVsPaid": "Free/entry access မှာ credits နှင့် models ကန့်သတ်ပါတယ်။ Paid Starter/Pro tier များက monthly credits, model access, queue/concurrency နှင့် higher-quality output တိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Limited credits/model trials",
+          "bestFor": "စမ်းသုံးရန်",
+          "limits": "Queue, watermark သို့မဟုတ် quality limits ဖြစ်နိုင်"
+        },
+        {
+          "name": "Starter",
+          "difference": "Entry paid credits နှင့် paid model access",
+          "bestFor": "casual creator",
+          "limits": "Pro ထက် credits/concurrency နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "Starter ထက် credits, models, concurrency နှင့် priority ပိုများ",
+          "bestFor": "regular commercial creator",
+          "limits": "Credit cost က model အလိုက်ကွာ"
+        },
+        {
+          "name": "Higher / team offers",
+          "difference": "High-volume capacity နှင့် collaboration",
+          "bestFor": "studio/team",
+          "limits": "Availability နှင့် naming ပြောင်းနိုင်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Starter",
+          "price": "99,000 Ks"
+        },
+        {
+          "plan": "Pro",
+          "price": "325,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Cinematic camera/motion presets",
+        "Image/video campaign workflow"
+      ],
+      "limitations": [
+        "Credits မြန်ကုန်နိုင်",
+        "Exact plan benefit မကြာခဏပြောင်း"
+      ],
+      "ownerNotes": [
+        "ဝယ်မည့်နေ့ official checkout နဲ့ credit amount စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Higgsfield plan guide",
+          "url": "https://higgsfield.ai/creator-hub/help-center/plans/how-do-higgsfield-plans-work"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "runway",
+      "product": "Runway",
+      "category": "AI Video",
+      "freeVsPaid": "Free က 125 one-time credits ခန့်နှင့် limited models/watermarked export ဖြစ်ပါတယ်။ Standard, Pro, Max က monthly credits, storage, quality နှင့် model access တိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "125 one-time credits ခန့်၊ limited video tools",
+          "bestFor": "စမ်းသုံးရန်",
+          "limits": "Credits ပြန်မဖြည့်; watermark/feature limits"
+        },
+        {
+          "name": "Standard",
+          "difference": "625 monthly credits ခန့်နှင့် paid features",
+          "bestFor": "casual/social creator",
+          "limits": "Heavy video generation အတွက်နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "2,250 monthly credits ခန့်၊ storage/model/export access ပိုများ",
+          "bestFor": "regular professional",
+          "limits": "Credits model/duration အလိုက်မြန်ကုန်"
+        },
+        {
+          "name": "Max",
+          "difference": "9,500 monthly credits ခန့်နှင့် အမြင့်ဆုံး regular capacity",
+          "bestFor": "studio/high volume",
+          "limits": "စျေးမြင့်; rollover rule ကန့်သတ်"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "Team/security/custom capacity",
+          "bestFor": "organization",
+          "limits": "Custom quote"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Standard",
+          "price": "99,000 Ks"
+        },
+        {
+          "plan": "Pro",
+          "price": "195,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Video generation/editing toolkit ပြည့်စုံ",
+        "Professional workflow နှင့် model choices"
+      ],
+      "limitations": [
+        "Credit-based; video seconds မြင့်လျှင်မြန်ကုန်",
+        "Unlimited plan naming/availability ပြောင်းနေ"
+      ],
+      "ownerNotes": [
+        "Runway က legacy Unlimited ကို Max ဖြင့်အစားထိုးနေသဖြင့် current checkout စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Runway credits",
+          "url": "https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work"
+        },
+        {
+          "label": "Choose a Runway plan",
+          "url": "https://help.runwayml.com/hc/en-us/articles/21664961171475-Which-plan-is-right-for-me"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "heygen",
+      "product": "HeyGen",
+      "category": "AI Video",
+      "freeVsPaid": "Free က တစ်လ 3 videos ခန့်၊ video တစ်ခု 1 minute နှင့် watermark ပါပါတယ်။ Creator က watermark ဖယ်၊ longer 1080p, voice clone ပေးပြီး Pro က 4K နှင့် advanced generation/translation တိုးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "3 videos/month ခန့်၊ 1 minute, basic avatars",
+          "bestFor": "စမ်းသုံးရန်",
+          "limits": "Watermark, short duration"
+        },
+        {
+          "name": "Creator",
+          "difference": "600 credits ခန့်၊ 30-minute video, 1080p, watermark removal, voice clone",
+          "bestFor": "solo creator/marketing",
+          "limits": "Credits နှင့် premium avatar limits ရှိ"
+        },
+        {
+          "name": "Pro",
+          "difference": "1,000 credits ခန့်၊ 4K, advanced models/translation controls",
+          "bestFor": "professional creator",
+          "limits": "Creator ထက်စျေးမြင့်"
+        },
+        {
+          "name": "Business",
+          "difference": "Team collaboration, SSO/admin နှင့် higher capacity",
+          "bestFor": "company",
+          "limits": "Seat/custom limits"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "Custom security, API, support နှင့် scale",
+          "bestFor": "large organization",
+          "limits": "Custom quote"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Creator",
+          "price": "195,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Avatar presentation နှင့် translation လွယ်",
+        "No-camera marketing/training video မြန်"
+      ],
+      "limitations": [
+        "Naturalness က language/avatar အလိုက်ကွာ",
+        "Consent/voice likeness policy လိုက်နာရန်"
+      ],
+      "ownerNotes": [],
+      "sources": [
+        {
+          "label": "HeyGen pricing",
+          "url": "https://www.heygen.com/pricing"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "midjourney",
+      "product": "Midjourney",
+      "category": "AI Image",
+      "freeVsPaid": "ပုံမှန် permanent Free plan မရှိပါ။ Basic မှာ Fast GPU hours နည်းပြီး Standard က Relax image generation unlimited ထည့်ပေးကာ Pro/Mega မှာ Fast hours, concurrency, Stealth နှင့် video access တိုးပါတယ်။",
+      "plans": [
+        {
+          "name": "Basic",
+          "difference": "3.3 Fast GPU hours/month ခန့်",
+          "bestFor": "occasional image creator",
+          "limits": "Relax unlimited မပါ"
+        },
+        {
+          "name": "Standard",
+          "difference": "15 Fast hours ခန့် + unlimited Relax images",
+          "bestFor": "regular image creator",
+          "limits": "Stealth မပါ; Relax နှေးနိုင်"
+        },
+        {
+          "name": "Pro",
+          "difference": "30 Fast hours ခန့်၊ Stealth နှင့် concurrent jobs ပိုများ; relaxed SD video",
+          "bestFor": "professional/commercial work",
+          "limits": "Stealth သုံးရန် plan ကိုအမြဲစစ်"
+        },
+        {
+          "name": "Mega",
+          "difference": "60 Fast hours ခန့်နှင့် maximum concurrency",
+          "bestFor": "studio/high volume",
+          "limits": "စျေးမြင့်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Basic",
+          "price": "65,000 Ks"
+        },
+        {
+          "plan": "Standard",
+          "price": "195,000 Ks"
+        },
+        {
+          "plan": "Other plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "High-quality stylized image output",
+        "Community/prompt ecosystem ကြီး"
+      ],
+      "limitations": [
+        "Free tier မရှိ",
+        "Default public gallery ဖြစ်နိုင်၍ confidential work တွင် Stealth စစ်ရန်"
+      ],
+      "ownerNotes": [
+        "niji limited trial ကဲ့သို့ promotion ကို permanent Free plan မဟုတ်ကြောင်း ရှင်းပြရန်"
+      ],
+      "sources": [
+        {
+          "label": "Compare Midjourney plans",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "api-credits",
+      "product": "AI API Credits",
+      "category": "Developer API",
+      "freeVsPaid": "ChatGPT/Gemini/Claude app subscription နှင့် API billing သီးခြားဖြစ်ပါတယ်။ API က token/media usage အလိုက် pay-as-you-go ဖြစ်ပြီး consumer plan ဝယ်ထားတာက API credits မပေးပါ။",
+      "plans": [
+        {
+          "name": "OpenAI API",
+          "difference": "Model input/output tokens, images, audio စသည့် usage အလိုက်",
+          "bestFor": "app developer",
+          "limits": "ChatGPT Plus/Pro နှင့် billing သီးခြား"
+        },
+        {
+          "name": "Gemini API",
+          "difference": "Free quota ရှိနိုင်ပြီး paid tier ကို tokens/media အလိုက်",
+          "bestFor": "Google AI developer",
+          "limits": "Google AI subscription နှင့် API quota သီးခြား"
+        },
+        {
+          "name": "Claude API",
+          "difference": "Input/output tokens, prompt caching စသည်အလိုက်",
+          "bestFor": "Claude app developer",
+          "limits": "Claude Pro/Max နှင့် API credits သီးခြား"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "USD 1–99 credit · per USD",
+          "price": "6,500 Ks"
+        },
+        {
+          "plan": "USD 100+ credit · per USD",
+          "price": "6,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Automation နှင့် custom app တည်ဆောက်နိုင်",
+        "Usage အလိုက်ချဲ့နိုင်"
+      ],
+      "limitations": [
+        "Key ကိုလုံခြုံစွာထားရ",
+        "Runaway usage ကုန်ကျစရိတ်ကို budget/rate limit ဖြင့်ထိန်းရန်"
+      ],
+      "ownerNotes": [
+        "Provider, model နှင့် top-up process ကို order တိုင်းအတည်ပြုရန်"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI API pricing",
+          "url": "https://openai.com/api/pricing/"
+        },
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        {
+          "label": "Claude API pricing",
+          "url": "https://docs.anthropic.com/en/docs/about-claude/pricing"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "spotify",
+      "product": "Spotify",
+      "category": "Streaming & Music",
+      "freeVsPaid": "Free မှာ ads, limited on-demand control နှင့် offline download မရှိပါ။ Premium plans အားလုံးက ad-free music, offline download, on-demand playback ကိုပေးပြီး အဓိကက account အရေအတွက်နှင့် eligibility ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Ads ပါသော music/podcast streaming",
+          "bestFor": "casual listener",
+          "limits": "Offline မရ; playback control က device/region အလိုက်ကန့်သတ်"
+        },
+        {
+          "name": "Premium Individual",
+          "difference": "Account 1 ခုအတွက် full Premium",
+          "bestFor": "တစ်ဦးတည်း",
+          "limits": "တစ်ယောက်တည်းသုံးရန်"
+        },
+        {
+          "name": "Premium Duo",
+          "difference": "Same household လူ 2 ယောက်အတွက် separate accounts",
+          "bestFor": "couple/roommates",
+          "limits": "လိပ်စာတူ eligibility လို"
+        },
+        {
+          "name": "Premium Family",
+          "difference": "Same household အတွင်း 6 accounts အထိ၊ parental tools",
+          "bestFor": "မိသားစု",
+          "limits": "Household verification ရှိ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Individual · 1 month",
+          "price": "16,000 Ks"
+        },
+        {
+          "plan": "Individual · 2 months",
+          "price": "32,000 Ks"
+        },
+        {
+          "plan": "Individual · 3 months",
+          "price": "48,000 Ks"
+        },
+        {
+          "plan": "Family slot · 1 month",
+          "price": "9,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Music catalog ကြီး၊ recommendation ကောင်း",
+        "Offline နှင့် multi-device continuity"
+      ],
+      "limitations": [
+        "Catalog/feature region အလိုက်ကွာ",
+        "Family slot သည် household terms လိုက်နာရ"
+      ],
+      "ownerNotes": [
+        "ဆိုင်က Family slot ရောင်းပုံသည် official same-household policy နဲ့ကိုက်ညီမှု စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Spotify Premium",
+          "url": "https://www.spotify.com/us/premium/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "netflix",
+      "product": "Netflix",
+      "category": "Streaming",
+      "freeVsPaid": "Official plans က ads, resolution, concurrent streams နှင့် download devices အလိုက်ကွာပါတယ်။ ဆိုင်က Myanmar Phone/Laptop/TV plan သည် official tier name မဟုတ်ဘဲ device-based fulfillment ဖြစ်နိုင်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Premium",
+          "difference": "No ads, 4K/HDR, concurrent streams 4 ခန့်နှင့် download devices ပိုများ",
+          "bestFor": "4K TV/multi-user household",
+          "limits": "4K အတွက် content/device/internet support လို"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Myanmar · Phone/Laptop",
+          "price": "18,000 Ks"
+        },
+        {
+          "plan": "Myanmar · TV",
+          "price": "19,997 Ks"
+        }
+      ],
+      "strengths": [
+        "Original catalog နှင့် multi-device apps",
+        "Download နှင့် profile support"
+      ],
+      "limitations": [
+        "Catalog/price/ads plan region အလိုက်ကွာ",
+        "Household sharing rules ရှိ"
+      ],
+      "ownerNotes": [
+        "KB ဟောင်းတွင် TV 20,000 Ks ဖြစ်ပြီး price file မှာ 19,997 Ks",
+        "Phone/Laptop/TV က official plan မဟုတ်သောကြောင့် resolution, duration, profile ownership ကို admin အတည်ပြုရန်"
+      ],
+      "sources": [
+        {
+          "label": "Netflix plans",
+          "url": "https://help.netflix.com/en/node/24926"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": true
+    },
+    {
+      "id": "youtube-premium",
+      "product": "YouTube Premium",
+      "category": "Streaming & Music",
+      "freeVsPaid": "Free YouTube မှာ ads ပါပြီး background play/download ကန့်သတ်ပါတယ်။ Premium က ad-free, background play, downloads နှင့် YouTube Music Premium ပေးပါတယ်။ Premium Lite က music မပါဘဲ video အများစုအတွက်အခြေခံ perks ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Ads ပါသော YouTube access",
+          "bestFor": "ပုံမှန် viewer",
+          "limits": "Background play/download နှင့် music premium မရ"
+        },
+        {
+          "name": "Premium Individual",
+          "difference": "Ad-free, download, background play + YouTube Music Premium",
+          "bestFor": "တစ်ဦးတည်း",
+          "limits": "Regional availability/price ကွာ"
+        },
+        {
+          "name": "Premium Family",
+          "difference": "Household members အတွက် Premium accounts",
+          "bestFor": "မိသားစု",
+          "limits": "Same household/Google family rules"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Individual · 1 month",
+          "price": "25,000 Ks"
+        },
+        {
+          "plan": "Individual · 2 months",
+          "price": "50,000 Ks"
+        },
+        {
+          "plan": "Individual · 3 months",
+          "price": "75,000 Ks"
+        }
+      ],
+      "strengths": [
+        "YouTube နှင့် Music တစ်ခါတည်း",
+        "Background/offline viewing အဆင်ပြေ"
+      ],
+      "limitations": [
+        "Creator sponsorship မဖယ်ပေး",
+        "အချို့ paid channel/movie content သီးခြား"
+      ],
+      "ownerNotes": [
+        "ဆိုင် plan သည် Individual ဟုတ်ကြောင်း price file မှတ်တမ်းအတိုင်းထား"
+      ],
+      "sources": [
+        {
+          "label": "YouTube Premium benefits",
+          "url": "https://support.google.com/youtube/answer/6308116"
+        },
+        {
+          "label": "Premium Lite",
+          "url": "https://support.google.com/youtube/answer/15968883"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "apple-music",
+      "product": "Apple Music",
+      "category": "Streaming & Music",
+      "freeVsPaid": "Permanent free on-demand plan မရှိဘဲ trial ရှိနိုင်ပါတယ်။ Individual, Student, Family တို့က catalog နှင့် core audio features တူပြီး eligibility/account အရေအတွက်ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Family",
+          "difference": "Family Sharing လူ 6 ယောက်အထိ separate libraries",
+          "bestFor": "မိသားစု",
+          "limits": "Family organizer/payment setup လို"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Apple device integration ကောင်း",
+        "Lossless နှင့် Spatial Audio catalog"
+      ],
+      "limitations": [
+        "Permanent free tier မရှိ",
+        "Lossless/Spatial အတွက် compatible hardware/data လို"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "Apple Music",
+          "url": "https://www.apple.com/apple-music/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "max",
+      "product": "Max / HBO Max",
+      "category": "Streaming",
+      "freeVsPaid": "Plans က ads, video quality, concurrent streams နှင့် downloads အလိုက်ကွာပါတယ်။ Region အလိုက် Max သို့ HBO Max နာမည်နှင့် tier များပြောင်းနိုင်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Basic with Ads",
+          "difference": "Ads ပါသော lower-cost catalog access",
+          "bestFor": "budget viewer",
+          "limits": "Downloads မရနိုင်၊ quality/streams နည်း"
+        },
+        {
+          "name": "Standard",
+          "difference": "Ad-free, Full HD, downloads နှင့် streams ပိုများ",
+          "bestFor": "ပုံမှန် household",
+          "limits": "4K ကန့်သတ်"
+        },
+        {
+          "name": "Premium",
+          "difference": "4K UHD/Dolby Atmos eligible content, streams/downloads အများဆုံး",
+          "bestFor": "4K TV household",
+          "limits": "Content/device support လို"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "HBO/Warner catalog",
+        "Premium tier တွင် 4K နှင့် offline"
+      ],
+      "limitations": [
+        "Region catalog နှင့် plan name ကွာ",
+        "Sports/add-ons သီးခြားဖြစ်နိုင်"
+      ],
+      "ownerNotes": [
+        "ဝယ်မည့် region, duration, exact tier ကို admin အတည်ပြုရန်"
+      ],
+      "sources": [
+        {
+          "label": "Max plan comparison",
+          "url": "https://help.max.com/us/Answer/Detail/000002547"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "prime-video",
+      "product": "Prime Video",
+      "category": "Streaming",
+      "freeVsPaid": "Prime Video access က standalone သို့ Amazon Prime bundle ဖြစ်နိုင်ပါတယ်။ Base plan တွင် ads ပါနိုင်ပြီး ad-free option/add-on, Channels နှင့် movie rentals က သီးခြားကုန်ကျနိုင်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Prime Video / Prime",
+          "difference": "Included catalog access; region အလိုက် ads ပါနိုင်",
+          "bestFor": "general viewer/Amazon user",
+          "limits": "Channels, rentals, purchases မပါ"
+        },
+        {
+          "name": "Ad-free add-on",
+          "difference": "Included catalog ၏ ads အများစုဖယ်",
+          "bestFor": "ad-free ကြည့်လိုသူ",
+          "limits": "Live content/promotional ads ရှိနိုင်"
+        },
+        {
+          "name": "Channels / Rentals",
+          "difference": "Provider channel subscription သို့ title တစ်ခုချင်း rent/buy",
+          "bestFor": "specific content viewer",
+          "limits": "Base membership နှင့်သီးခြားကုန်ကျ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "1 month",
+          "price": "12,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Prime Originals နှင့် rental catalog",
+        "Multi-device/download support"
+      ],
+      "limitations": [
+        "Catalog, ads, streams region အလိုက်ကွာ",
+        "Channels/rentals ကို membership ပါသည်ဟုမထင်ရန်"
+      ],
+      "ownerNotes": [
+        "12,000 Ks plan က standalone/share/account ownership နှင့် region ကို admin ပြောရန်"
+      ],
+      "sources": [
+        {
+          "label": "Prime Video help",
+          "url": "https://www.primevideo.com/help"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "disney-plus",
+      "product": "Disney+",
+      "category": "Streaming",
+      "freeVsPaid": "Region အလိုက် Standard with Ads, Standard/Premium ad-free tiers ရှိပြီး ads, video quality, simultaneous streams နှင့် downloads ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Standard with Ads",
+          "difference": "Lower-cost catalog access with ads",
+          "bestFor": "budget viewer",
+          "limits": "Downloads မရနိုင်၊ region-limited"
+        },
+        {
+          "name": "Standard",
+          "difference": "Ad-free, Full HD နှင့် downloads",
+          "bestFor": "ပုံမှန် viewer",
+          "limits": "4K/streams Premium ထက်နည်းနိုင်"
+        },
+        {
+          "name": "Premium",
+          "difference": "4K/HDR/Dolby Atmos eligible content နှင့် concurrent streams ပိုများ",
+          "bestFor": "4K family household",
+          "limits": "Device/content support လို"
+        },
+        {
+          "name": "Bundles",
+          "difference": "Disney+, Hulu, ESPN စသည့် service bundle",
+          "bestFor": "US ecosystem user",
+          "limits": "Country-specific; catalog/ads tier ကိုစစ်ရန်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Disney, Pixar, Marvel, Star Wars catalog",
+        "Family-friendly profiles/downloads"
+      ],
+      "limitations": [
+        "Plan/tier availability region အလိုက်ကွာ",
+        "Premier Access/partner content သီးခြားဖြစ်နိုင်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မရှိ; region နှင့် exact tier လို"
+      ],
+      "sources": [
+        {
+          "label": "Disney+ pricing help",
+          "url": "https://help.disneyplus.com/article/disneyplus-price"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "iqiyi",
+      "product": "iQIYI",
+      "category": "Streaming",
+      "freeVsPaid": "Free မှာ ads နှင့် VIP-locked/quality limits ရှိပါတယ်။ Standard VIP က Full HD နှင့် 2-device concurrent playback ခန့်၊ Premium VIP က 4K နှင့် 4-device concurrent playback ခန့်ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Ads ပါသော selected catalog",
+          "bestFor": "casual viewer",
+          "limits": "VIP/early episodes/quality/download ကန့်သတ်"
+        },
+        {
+          "name": "Standard VIP",
+          "difference": "VIP catalog, up to 1080p, concurrent devices 2 ခန့်",
+          "bestFor": "individual/couple",
+          "limits": "4K နှင့် streams Premium ထက်နည်း"
+        },
+        {
+          "name": "Premium VIP",
+          "difference": "Up to 4K, concurrent devices 4 ခန့်နှင့် privileges ပိုများ",
+          "bestFor": "family/4K viewer",
+          "limits": "Content/device/region support လို"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Asian drama/variety catalog",
+        "VIP early/exclusive access"
+      ],
+      "limitations": [
+        "VIP ဖြစ်လည်း ad အမျိုးအစားအားလုံးမဖယ်နိုင်",
+        "Catalog/subtitles region အလိုက်ကွာ"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "iQIYI VIP privileges",
+          "url": "https://www.iq.com/vip/privilege"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "capcut",
+      "product": "CapCut",
+      "category": "Design & Creative",
+      "freeVsPaid": "Free က core video editing ရပါတယ်။ Standard က affordable/mobile-focused paid tools ပေးပြီး Pro က cross-platform premium assets, advanced AI, collaboration နှင့် cloud capacity ပိုများပါတယ်။ ဆိုင်က Provide Account/Own Mail က official feature tier မဟုတ်ဘဲ ပေးအပ်ပုံကွာခြားချက်ဖြစ်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Core edit, templates, basic effects/export",
+          "bestFor": "casual social editing",
+          "limits": "Premium effects/assets/AI locked"
+        },
+        {
+          "name": "Pro",
+          "difference": "Premium effects/assets, advanced AI, larger cloud/collaboration, cross-platform access",
+          "bestFor": "professional creator/team",
+          "limits": "AI quotas နှင့် availability region/platform အလိုက်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro · provided account",
+          "price": "20,000 Ks"
+        },
+        {
+          "plan": "Pro · official own mail",
+          "price": "30,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Social video workflow မြန်",
+        "Mobile/desktop အသုံးပြုရလွယ်"
+      ],
+      "limitations": [
+        "AI features က quota/region အလိုက်ကွာ",
+        "Commercial asset license ကိုစစ်ရန်"
+      ],
+      "ownerNotes": [
+        "20,000 vs 30,000 Ks က feature မတူခြင်းမဟုတ်ဘဲ account ownership/support difference ကို customer ကိုရှင်းပြရန်"
+      ],
+      "sources": [
+        {
+          "label": "CapCut Standard vs Pro",
+          "url": "https://www.capcut.com/help/capcut-standard-vs-pro"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "canva",
+      "product": "Canva",
+      "category": "Design & Creative",
+      "freeVsPaid": "Free က templates/assets နှင့် AI usage အခြေခံရပါတယ်။ Pro က premium library, brand kit, background resize/removal, AI usage ပိုများပြီး Business/Enterprise မှာ team admin နှင့် security တိုးပါတယ်။ Education က eligible K-12 users အတွက်သာဖြစ်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Free templates/assets, 5GB ခန့် storage, limited AI",
+          "bestFor": "personal/basic design",
+          "limits": "Premium assets/brand tools locked"
+        },
+        {
+          "name": "Pro",
+          "difference": "Premium library, Brand Kit, resize/remove background, AI limits ပိုများ",
+          "bestFor": "solo creator/small business",
+          "limits": "Team governance နည်း"
+        },
+        {
+          "name": "Education",
+          "difference": "Eligible K-12 teachers/students အတွက် premium education access",
+          "bestFor": "verified school use",
+          "limits": "Eligibility/terms ရှိ; resale/general business မဟုတ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro own mail · 1 month",
+          "price": "25,000 Ks"
+        },
+        {
+          "plan": "Pro own mail · 3 months",
+          "price": "50,000 Ks"
+        },
+        {
+          "plan": "Pro own mail · 6 months",
+          "price": "100,000 Ks"
+        },
+        {
+          "plan": "Pro own mail · 12 months",
+          "price": "125,000 Ks"
+        },
+        {
+          "plan": "Edu Pro · 12 months",
+          "price": "22,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Template/asset ecosystem ကြီး",
+        "Non-designer အတွက်မြန်"
+      ],
+      "limitations": [
+        "Premium asset license/AI terms ကိုလိုက်နာရ",
+        "Complex vector/layout control က dedicated app ထက်နည်း"
+      ],
+      "ownerNotes": [
+        "KB ဟောင်းမှာ 12 months 135,000 Ks ဖြစ်ပြီး price file မှာ 125,000 Ks",
+        "Edu plan eligibility နှင့် legitimate school access ကိုအတည်ပြုရန်"
+      ],
+      "sources": [
+        {
+          "label": "Canva pricing",
+          "url": "https://www.canva.com/pricing/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "adobe-cc",
+      "product": "Adobe Creative Cloud",
+      "category": "Design & Creative",
+      "freeVsPaid": "Free apps/trials ကန့်သတ်ပြီး Single App က app တစ်ခုကိုပေးပါတယ်။ Creative Cloud Pro က Photoshop, Illustrator, Premiere Pro စသည့် 20+ apps, storage နှင့် generative AI credits/access ပိုများပါတယ်။",
+      "plans": [
+        {
+          "name": "Creative Cloud Pro",
+          "difference": "20+ apps, fonts, portfolio, storage နှင့် AI access ပိုများ",
+          "bestFor": "multi-discipline creator",
+          "limits": "စျေးမြင့်; AI credit rules ရှိ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Creative Cloud · 1 month · 1 device",
+          "price": "55,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Industry-standard creative apps",
+        "Cross-app workflow နှင့် fonts/cloud"
+      ],
+      "limitations": [
+        "Hardware/storage လိုအပ်ချက်ကြီး",
+        "Cancellation, device activation, AI terms စစ်ရန်"
+      ],
+      "ownerNotes": [
+        "55,000 Ks plan က exact official tier, account ownership နှင့် included apps ကို admin အတည်ပြုရန်"
+      ],
+      "sources": [
+        {
+          "label": "Adobe Creative Cloud plans",
+          "url": "https://www.adobe.com/creativecloud/pricing.html"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": true
+    },
+    {
+      "id": "figma",
+      "product": "Figma",
+      "category": "Design & Creative",
+      "freeVsPaid": "Starter Free က files/projects နှင့် collaboration limits ရှိပါတယ်။ Professional မှာ unlimited files/team libraries, advanced prototyping/Dev Mode ပိုရပြီး Organization/Enterprise က cross-team design system နှင့် admin/security တိုးပါတယ်။",
+      "plans": [
+        {
+          "name": "Starter",
+          "difference": "Limited team files/projects နှင့် basic design/prototype",
+          "bestFor": "individual/learning",
+          "limits": "History/library/team limits"
+        },
+        {
+          "name": "Professional",
+          "difference": "Unlimited files/projects, team libraries, advanced prototyping; seat types",
+          "bestFor": "professional team",
+          "limits": "Full/Dev/Collab seat feature ကွာ"
+        },
+        {
+          "name": "Organization",
+          "difference": "Shared libraries across teams, branching, centralized admin/SSO",
+          "bestFor": "multi-team company",
+          "limits": "Annual/seat commitment"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "Workspaces, SCIM, advanced security/admin",
+          "bestFor": "large organization",
+          "limits": "Custom terms"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Real-time UI collaboration",
+        "Design system + Dev Mode workflow"
+      ],
+      "limitations": [
+        "Offline ကန့်သတ်",
+        "Seat type မမှန်လျှင် feature မရ"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မရှိ; Full/Dev/Collab seat ကို order မှာသတ်မှတ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Figma pricing",
+          "url": "https://www.figma.com/pricing/"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "picsart",
+      "product": "Picsart",
+      "category": "Design & Creative",
+      "freeVsPaid": "Free က basic photo/video editing နှင့် limited assets/AI ရပါတယ်။ Plus/Pro က premium content, AI credits, batch/background tools နှင့် brand features တိုးပြီး Enterprise က team/API/custom support ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Basic editor, free templates/assets",
+          "bestFor": "casual edit",
+          "limits": "Premium assets/AI credits နည်း"
+        },
+        {
+          "name": "Plus",
+          "difference": "Premium creative assets/tools နှင့် AI usage တိုး",
+          "bestFor": "regular creator",
+          "limits": "Pro brand/team capability နည်း"
+        },
+        {
+          "name": "Pro",
+          "difference": "Higher AI credits, advanced edit, brand kit/batch tools",
+          "bestFor": "professional/marketer",
+          "limits": "Credit-based tools ရှိ"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "Team, API, security နှင့် custom scale",
+          "bestFor": "organization",
+          "limits": "Custom quote"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Mobile-friendly quick editing",
+        "Templates နှင့် AI effects များ"
+      ],
+      "limitations": [
+        "Exact features app/web/platform အလိုက်ကွာ",
+        "AI credits နှင့် asset licensing စစ်ရန်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "Picsart pricing",
+          "url": "https://picsart.com/pricing"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "google-one",
+      "product": "Google One / Drive",
+      "category": "Cloud Storage",
+      "freeVsPaid": "Google account Free မှာ Drive, Gmail, Photos ပေါင်း 15GB ရပါတယ်။ Google One tiers က shared storage နှင့် benefits တိုးပြီး Google AI tiers က Gemini/AI tools ကိုထည့်ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "15GB shared Google storage",
+          "bestFor": "light personal use",
+          "limits": "Gmail/Drive/Photos အတူသုံး၍မြန်ပြည့်"
+        },
+        {
+          "name": "Basic",
+          "difference": "100GB + family sharing/benefits",
+          "bestFor": "backup ပေါ့ပါးသူ",
+          "limits": "AI premium features မပါ"
+        },
+        {
+          "name": "Standard",
+          "difference": "200GB + benefits ပိုများ",
+          "bestFor": "individual/family storage",
+          "limits": "Heavy photo/video အတွက်နည်းနိုင်"
+        },
+        {
+          "name": "Premium",
+          "difference": "2TB + premium benefits",
+          "bestFor": "creator/family",
+          "limits": "AI plan မဟုတ်နိုင်; region offer စစ်"
+        },
+        {
+          "name": "Google AI Plus / Pro / Ultra",
+          "difference": "Storage နှင့် Gemini/NotebookLM/creative AI limits အဆင့်လိုက်တိုး",
+          "bestFor": "AI + storage user",
+          "limits": "Tier name/storage/AI benefit ပြောင်းနိုင်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Google apps နှင့် automatic integration",
+        "Family sharing ရှိ"
+      ],
+      "limitations": [
+        "Shared 15GB မြန်ပြည့်နိုင်",
+        "AI plan နဲ့ storage-only plan မရောပြောရန်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "Google One plans",
+          "url": "https://one.google.com/about/plans"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "zoom",
+      "product": "Zoom Workplace",
+      "category": "Productivity",
+      "freeVsPaid": "Basic Free မှာ group meeting 40 minutes ခန့်နှင့် participants 100 အထိဖြစ်ပါတယ်။ Pro က 30-hour meetings, AI Companion, cloud recording/storage ပိုရပြီး Business က participants/admin/SSO တိုးပါတယ်။",
+      "plans": [
+        {
+          "name": "Pro",
+          "difference": "30-hour meetings, 100 participants, AI Companion, 10GB cloud ခန့်",
+          "bestFor": "professional/teacher",
+          "limits": "Large webinar/advanced admin မပါ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Pro · 1 month",
+          "price": "25,000 Ks"
+        },
+        {
+          "plan": "Pro · 2 months",
+          "price": "50,000 Ks"
+        },
+        {
+          "plan": "Pro · 3 months",
+          "price": "75,000 Ks"
+        },
+        {
+          "plan": "Pro · 6 months",
+          "price": "140,000 Ks"
+        },
+        {
+          "plan": "Pro · 12 months",
+          "price": "270,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Stable meeting ecosystem",
+        "Recording, captions, AI notes"
+      ],
+      "limitations": [
+        "Pro participant cap ကို webinar capability နဲ့မရောရန်",
+        "AI/phone features region/language အလိုက်ကွာ"
+      ],
+      "ownerNotes": [],
+      "sources": [
+        {
+          "label": "Zoom Workplace Pro",
+          "url": "https://www.zoom.com/en/products/collaboration-tools/zoom-workplace-pro/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "telegram-premium",
+      "product": "Telegram Premium",
+      "category": "Productivity",
+      "freeVsPaid": "Free Telegram မှာ core messaging, groups, calls, multi-device နှင့် cloud chats ရပါတယ်။ Premium က limits နှစ်ဆခန့်, 4GB uploads, faster downloads, transcription, translation, custom emoji နှင့် official ads ဖယ်ခြင်းပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Core messaging, cloud sync, groups/channels/calls",
+          "bestFor": "ပုံမှန် user",
+          "limits": "2GB upload နှင့် standard limits ခန့်"
+        },
+        {
+          "name": "Premium",
+          "difference": "Doubled limits, 4GB files, faster download, transcription/translation, custom emoji",
+          "bestFor": "heavy Telegram user/business",
+          "limits": "Third-party channel ads မဖယ်; duration အလိုက် feature မကွာ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "1 month",
+          "price": "Ask admin"
+        },
+        {
+          "plan": "3 months",
+          "price": "65,000 Ks"
+        },
+        {
+          "plan": "6 months",
+          "price": "119,000 Ks"
+        },
+        {
+          "plan": "12 months",
+          "price": "179,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Core Telegram Free ကတော်တော်ပြည့်စုံ",
+        "Premium သည် storage/limits/productivity တိုး"
+      ],
+      "limitations": [
+        "Premium badge မဟုတ်သော official verification မပေး",
+        "Account region/payment အလိုက် price ကွာ"
+      ],
+      "ownerNotes": [
+        "1-month price မရှိသေး"
+      ],
+      "sources": [
+        {
+          "label": "Telegram Premium FAQ",
+          "url": "https://telegram.org/faq_premium/"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "microsoft-365",
+      "product": "Microsoft 365",
+      "category": "Productivity",
+      "freeVsPaid": "Free မှာ web/mobile Word, Excel, PowerPoint နှင့် 5GB OneDrive ခန့်ရပါတယ်။ Personal က desktop apps, 1TB နှင့် Copilot benefits ကိုတစ်ယောက်အတွက်၊ Family/Premium က လူ 6 ယောက်အထိတိုးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Web/mobile Office apps နှင့် 5GB OneDrive",
+          "bestFor": "basic documents",
+          "limits": "Desktop full apps/1TB မရ"
+        },
+        {
+          "name": "Personal",
+          "difference": "1 person, 5 devices simultaneously ခန့်, 1TB, desktop apps, Copilot",
+          "bestFor": "individual professional",
+          "limits": "တစ်ယောက်တည်း"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Personal · 12 months",
+          "price": "74,997 Ks"
+        }
+      ],
+      "strengths": [
+        "Office desktop apps နှင့် cloud integration",
+        "1TB personal storage"
+      ],
+      "limitations": [
+        "AI features/credits region အလိုက်ကွာ",
+        "Personal license ကို business multi-user plan ဟုမရောင်းရန်"
+      ],
+      "ownerNotes": [],
+      "sources": [
+        {
+          "label": "Compare Microsoft 365",
+          "url": "https://www.microsoft.com/microsoft-365/buy/compare-all-microsoft-365-products"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "windows-key",
+      "product": "Windows License Key",
+      "category": "Productivity",
+      "freeVsPaid": "Windows activation key သည် subscription မဟုတ်ပါ။ Home နှင့် Pro က security, device management, remote desktop host, domain/Entra join စသည့် business features ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Windows Home",
+          "difference": "Consumer core Windows, security နှင့် gaming",
+          "bestFor": "home user",
+          "limits": "Domain join, BitLocker management, Remote Desktop host မပါ/နည်း"
+        },
+        {
+          "name": "Windows Pro",
+          "difference": "Home + BitLocker, Remote Desktop host, domain/Entra join, policy management",
+          "bestFor": "professional/small business",
+          "limits": "Enterprise controls အပြည့်မပါ"
+        },
+        {
+          "name": "Enterprise",
+          "difference": "Advanced deployment, security, management",
+          "bestFor": "large organization",
+          "limits": "Volume licensing; retail key မဟုတ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any key",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "One-time activation option ဖြစ်နိုင်",
+        "Pro တွင် business security/management ပိုများ"
+      ],
+      "limitations": [
+        "OEM/Retail/Volume key transferability မတူ",
+        "Version/edition/region မကိုက်လျှင် activate မဖြစ်"
+      ],
+      "ownerNotes": [
+        "Key type, edition, device count, lifetime meaning နှင့် refund terms ကို admin အတည်ပြုရန်"
+      ],
+      "sources": [
+        {
+          "label": "Windows 11 Home vs Pro",
+          "url": "https://www.microsoft.com/windows/compare-windows-11-home-vs-pro-versions"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "icloud-plus",
+      "product": "iCloud+",
+      "category": "Cloud Storage",
+      "freeVsPaid": "Free iCloud မှာ 5GB ရပါတယ်။ iCloud+ 50GB, 200GB, 2TB, 6TB, 12TB အားလုံးတွင် Private Relay, Hide My Email, Custom Email Domain နှင့် family sharing ပါပြီး storage/HomeKit camera capacity ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "5GB storage",
+          "bestFor": "basic sync",
+          "limits": "Backup/photos နဲ့မြန်ပြည့်"
+        },
+        {
+          "name": "50GB",
+          "difference": "iCloud+ privacy features + 1 HomeKit camera ခန့်",
+          "bestFor": "single light user",
+          "limits": "Storage နည်း"
+        },
+        {
+          "name": "200GB",
+          "difference": "ပို storage + HomeKit cameras 5 ခန့်",
+          "bestFor": "individual/small family",
+          "limits": "Heavy media အတွက်နည်းနိုင်"
+        },
+        {
+          "name": "2TB",
+          "difference": "Large storage + unlimited HomeKit camera support ခန့်",
+          "bestFor": "creator/family",
+          "limits": "Monthly subscription"
+        },
+        {
+          "name": "6TB / 12TB",
+          "difference": "Maximum personal/family storage",
+          "bestFor": "very large photo/video library",
+          "limits": "စျေးမြင့်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Apple backup/photo sync လွယ်",
+        "Paid tiers အားလုံး privacy features ပါ"
+      ],
+      "limitations": [
+        "Private Relay feature region အလိုက်မရနိုင်",
+        "Family sharing က Apple Family setup လို"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မရှိ; storage size နှင့် Apple ID region လို"
+      ],
+      "sources": [
+        {
+          "label": "iCloud+ plans",
+          "url": "https://support.apple.com/en-us/108047"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "duolingo",
+      "product": "Duolingo",
+      "category": "Education",
+      "freeVsPaid": "Free က lessons အားလုံးနီးပါးကို ads နှင့် energy/hearts limits ဖြင့်သင်နိုင်ပါတယ်။ Super က ads ဖယ်၊ unlimited energy နှင့် practice tools ပေးပြီး Max က AI Video Call နှင့် Roleplay ထည့်ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Core language courses, streaks နှင့် basic practice",
+          "bestFor": "casual learner",
+          "limits": "Ads နှင့် energy/hearts limits"
+        },
+        {
+          "name": "Super",
+          "difference": "No ads, unlimited energy/hearts, personalized practice နှင့် streak perks",
+          "bestFor": "နေ့စဉ်ပုံမှန်သင်သူ",
+          "limits": "Max AI conversation မပါ"
+        },
+        {
+          "name": "Max",
+          "difference": "Super benefits + AI Video Call နှင့် Roleplay conversation practice",
+          "bestFor": "speaking practice လိုသူ",
+          "limits": "Language/device/region အားလုံးတွင်မရနိုင်"
+        },
+        {
+          "name": "Family",
+          "difference": "Super သို့ Max benefits ကို members အများအတွက်",
+          "bestFor": "family/friends group",
+          "limits": "1 seat ပဲရောင်းပေးပါတယ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Super · 1 month",
+          "price": "9,000 Ks"
+        },
+        {
+          "plan": "Super · 3 months",
+          "price": "23,000 Ks"
+        },
+        {
+          "plan": "Super · 6 months",
+          "price": "45,000 Ks"
+        },
+        {
+          "plan": "Super · 12 months",
+          "price": "85,000 Ks"
+        },
+        {
+          "plan": "Max · 1 month",
+          "price": "15,000 Ks"
+        },
+        {
+          "plan": "Max · 3 months",
+          "price": "40,000 Ks"
+        },
+        {
+          "plan": "Max · 6 months",
+          "price": "75,000 Ks"
+        },
+        {
+          "plan": "Max · 12 months",
+          "price": "145,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Gamified habit building ကောင်း",
+        "Free ဖြင့် core lessons သင်နိုင်"
+      ],
+      "limitations": [
+        "Course quality/depth က language အလိုက်ကွာ",
+        "Fluency အပြည့်အတွက် speaking/listening outside practice လို"
+      ],
+      "ownerNotes": [
+        "Price file မှာ product name “Duoling” typo ဖြစ်နေ၍ Duolingo ဟုပြင်ရန်",
+        "Explain My Answer ကို Max-only ဟုမပြောရန်; လက်ရှိ Free ထဲရလာသည်"
+      ],
+      "sources": [
+        {
+          "label": "Duolingo strategy/plans",
+          "url": "https://investors.duolingo.com/company-strategy-overview-0"
+        },
+        {
+          "label": "Explain My Answer update",
+          "url": "https://blog.duolingo.com/explain-my-answer-now-free/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "grammarly",
+      "product": "Grammarly",
+      "category": "Education & Writing",
+      "freeVsPaid": "Free က grammar, spelling, tone နှင့် monthly AI prompts အနည်းငယ်ရပါတယ်။ လက်ရှိ official paid individual plan ကို Pro ဟုခေါ်ပြီး full rewrites, tone/fluency, plagiarism/AI checks နှင့် AI prompts ပိုများပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Grammar/spelling/tone basics + AI prompts 100 ခန့်",
+          "bestFor": "နေ့စဉ်စာတို",
+          "limits": "Advanced rewrite/plagiarism features ကန့်သတ်"
+        },
+        {
+          "name": "Pro",
+          "difference": "Full-sentence rewrites, style/tone, fluency, plagiarism/AI checks + prompts 2,000 ခန့်",
+          "bestFor": "student/writer/professional",
+          "limits": "Detection score ကို definitive proof မယူသင့်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Premium · 1 month",
+          "price": "30,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Real-time writing suggestions",
+        "Browser/Office integration"
+      ],
+      "limitations": [
+        "AI/plagiarism detection မှားနိုင်",
+        "Rewrite ကြောင့် original voice/meaning ပြောင်းနိုင်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်က Premium ဟုခေါ်သော်လည်း official individual tier name သည် Pro ဖြစ်နေသည်; entitlement တူ/မတူစစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Grammarly plans",
+          "url": "https://www.grammarly.com/plans"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "linkedin-premium",
+      "product": "LinkedIn Premium",
+      "category": "Education & Career",
+      "freeVsPaid": "Free account မှာ profile, network, jobs နှင့် basic search ရပါတယ်။ Premium product တစ်မျိုးစီသည် job seeking, business networking, sales prospecting သို့ recruiting ရည်ရွယ်ချက်ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Profile, connect, job search/apply, basic messaging/search",
+          "bestFor": "general networking",
+          "limits": "Who viewed/profile insights, InMail, advanced filters နည်း"
+        },
+        {
+          "name": "Premium Career",
+          "difference": "Job insights, applicant comparison, learning, InMail 5 ခန့်",
+          "bestFor": "job seeker",
+          "limits": "Sales/recruiting tools မပါ"
+        },
+        {
+          "name": "Premium Business",
+          "difference": "Business insights, unlimited-ish browsing, InMail 15 ခန့်",
+          "bestFor": "founder/networker",
+          "limits": "Lead workflow Sales Navigator ထက်နည်း"
+        },
+        {
+          "name": "Premium All-in-One",
+          "difference": "Small-business outreach/content/lead features, InMail ပိုများ",
+          "bestFor": "small business",
+          "limits": "Availability က market အလိုက်"
+        },
+        {
+          "name": "Sales Navigator",
+          "difference": "Advanced lead/company search, alerts, CRM workflow, InMail 50 ခန့်",
+          "bestFor": "sales professional",
+          "limits": "Job seeker plan မဟုတ်"
+        },
+        {
+          "name": "Recruiter Lite",
+          "difference": "Candidate search, recruiting projects, InMail 30 ခန့်",
+          "bestFor": "small recruiting team",
+          "limits": "Enterprise Recruiter ထက်နည်း"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Professional network data ကြီး",
+        "Goal-specific premium tools များ"
+      ],
+      "limitations": [
+        "InMail/limits ပြောင်းနိုင်",
+        "Premium တစ်မျိုးက အခြား product feature အားလုံးမပါ"
+      ],
+      "ownerNotes": [
+        "Customer use case မေးပြီး Career/Business/Sales/Recruiter ကိုရွေးရန်"
+      ],
+      "sources": [
+        {
+          "label": "LinkedIn account types",
+          "url": "https://www.linkedin.com/help/linkedin/answer/a545596/linkedin-free-accounts-and-premium-subscriptions"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "coursera-plus",
+      "product": "Coursera Plus",
+      "category": "Education",
+      "freeVsPaid": "Free/audit option ရှိသော course များမှာ videos/materials ကို certificate မပါဘဲကြည့်နိုင်ပါတယ်။ Course တစ်ခုချင်းဝယ်ခြင်းက program တစ်ခုအတွက်၊ Coursera Plus က included catalog 10,000+ courses ကို subscription အတွင်း unlimited access/certificates ပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free / Audit",
+          "difference": "Selected course content ကို certificate မပါဘဲ",
+          "bestFor": "topic စမ်းသင်ရန်",
+          "limits": "Assignments/certificate/access ကန့်သတ်"
+        },
+        {
+          "name": "Single course / program",
+          "difference": "Course/specialization တစ်ခုကို paid access + certificate",
+          "bestFor": "တစ်ခုတည်းလိုသူ",
+          "limits": "အခြား catalog မပါ"
+        },
+        {
+          "name": "Coursera Plus Monthly",
+          "difference": "Included catalog unlimited; monthly cancel flexibility",
+          "bestFor": "short intensive learning",
+          "limits": "ဆက်သွင်းနေမှ access; catalog exclusions ရှိ"
+        },
+        {
+          "name": "Coursera Plus Annual",
+          "difference": "Monthly ထက် year-long value; included certificates",
+          "bestFor": "continuous learner",
+          "limits": "Degrees/MasterTrack နှင့် excluded programs မပါ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "University/company course catalog ကြီး",
+        "Included course certificates များ"
+      ],
+      "limitations": [
+        "Course အားလုံး Plus ထဲမပါ",
+        "Subscription ပိတ်လျှင် unfinished access ဆုံးနိုင်"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မရှိ; monthly/annual နှင့် own-account access စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "Coursera Plus",
+          "url": "https://www.coursera.org/courseraplus"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "scribd-everand",
+      "product": "Scribd / Everand",
+      "category": "Education & Reading",
+      "freeVsPaid": "Everand က ebooks/audiobooks subscription ဖြစ်ပြီး Scribd/SlideShare နဲ့ service ခွဲထားပါတယ်။ လက်ရှိ Standard, Plus, Deluxe tier များက တစ်လ unlock အရေအတွက် 1, 3, 5 အလိုက်ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Free / Trial",
+          "difference": "Public previews သို့ eligibility ရှိ trial",
+          "bestFor": "စမ်းသုံးရန်",
+          "limits": "Full premium catalog permanent free မဟုတ်"
+        },
+        {
+          "name": "Everand Standard",
+          "difference": "Premium catalog unlock 1/month ခန့်",
+          "bestFor": "light reader",
+          "limits": "Unlock အပိုလိုလျှင်မလုံလောက်"
+        },
+        {
+          "name": "Everand Plus",
+          "difference": "Unlock 3/month ခန့်",
+          "bestFor": "regular reader",
+          "limits": "Catalog availability region/publisher အလိုက်"
+        },
+        {
+          "name": "Everand Deluxe",
+          "difference": "Unlock 5/month ခန့်",
+          "bestFor": "heavy reader/listener",
+          "limits": "Unlimited every title မဟုတ်"
+        },
+        {
+          "name": "Scribd / SlideShare",
+          "difference": "Documents/presentations community services",
+          "bestFor": "document reader",
+          "limits": "Everand book entitlement နဲ့မတူ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Ebook/audiobook catalog ကြီး",
+        "Reading/listening တစ် app ထဲ"
+      ],
+      "limitations": [
+        "Premium unlock model ကို unlimited ဟုမပြောရန်",
+        "Publisher/region အလိုက် title availability ကွာ"
+      ],
+      "ownerNotes": [
+        "ဆိုင်က Scribd ဟုသာရေးထားသဖြင့် Everand books လား Scribd documents လားရှင်းရန်"
+      ],
+      "sources": [
+        {
+          "label": "Everand plans",
+          "url": "https://support.scribd.com/hc/en-us/articles/40678839226644-Everand-plans-Standard-Plus-and-Deluxe"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": false
+    },
+    {
+      "id": "turnitin",
+      "product": "Turnitin",
+      "category": "Education",
+      "freeVsPaid": "Turnitin Similarity/Feedback Studio ကို ပုံမှန်အားဖြင့် school/university institution ကဝယ်သုံးရပြီး individual direct subscription မရောင်းပါ။ Student က institution assignment မှတစ်ဆင့်သုံးရတာများပါတယ်။",
+      "plans": [
+        {
+          "name": "Student access",
+          "difference": "School/instructor assignment မှတစ်ဆင့် submission/report",
+          "bestFor": "institution student",
+          "limits": "Personal direct purchase မဟုတ်"
+        },
+        {
+          "name": "Institution license",
+          "difference": "Similarity, feedback, integrity tools ကို organization deployment",
+          "bestFor": "school/university",
+          "limits": "Custom institutional contract"
+        },
+        {
+          "name": "iThenticate",
+          "difference": "Researcher/publisher-oriented similarity checking product",
+          "bestFor": "research manuscript",
+          "limits": "Turnitin student product နဲ့မတူ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any access",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Academic similarity database ကြီး",
+        "Institution workflow integration"
+      ],
+      "limitations": [
+        "Similarity score သည် plagiarism verdict မဟုတ်",
+        "Unofficial shared/resold account သည် privacy/terms risk မြင့်"
+      ],
+      "ownerNotes": [
+        "Third-party personal account ရောင်းမည်ဆိုလျှင် source, privacy, institution authorization ကို owner အတည်ပြုမပြီး knowledge ထဲမထည့်သင့်"
+      ],
+      "sources": [
+        {
+          "label": "Turnitin purchase policy",
+          "url": "https://guides.turnitin.com/hc/en-us/articles/37985974637453-How-to-purchase-a-Turnitin-subscription"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "udemy",
+      "product": "Udemy",
+      "category": "Education",
+      "freeVsPaid": "Free courses တွင် features/certificate ကန့်သတ်နိုင်ပါတယ်။ Course တစ်ခုချင်းဝယ်ခြင်းက အဲဒီ course ကို lifetime access ပေးတတ်ပြီး Personal Plan က curated catalog ကို subscription active သမျှ unlimited လေ့လာနိုင်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Free courses",
+          "difference": "Selected free course videos",
+          "bestFor": "topic စမ်းသင်ရန်",
+          "limits": "Certificate/Q&A/features နည်းနိုင်"
+        },
+        {
+          "name": "Individual course purchase",
+          "difference": "Course တစ်ခုကို lifetime access + completion certificate ဖြစ်နိုင်",
+          "bestFor": "တိကျသော course တစ်ခု",
+          "limits": "အခြား courses မပါ"
+        },
+        {
+          "name": "Personal Plan",
+          "difference": "Curated 26,000+ course catalog ခန့်၊ subscription certificates/AI tools",
+          "bestFor": "continuous learner",
+          "limits": "Udemy course 250,000+ အားလုံးမပါ; cancel လျှင် access ဆုံး"
+        },
+        {
+          "name": "Business",
+          "difference": "Curated business catalog, analytics/admin/learning paths",
+          "bestFor": "company/team",
+          "limits": "Seat pricing"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Course အမျိုးအစားများ၊ sale price များ",
+        "Individual purchase မှ lifetime access option"
+      ],
+      "limitations": [
+        "Instructor quality ကွာ",
+        "Personal Plan catalog ထဲမပါသော course များရှိ"
+      ],
+      "ownerNotes": [
+        "ဆိုင်မှာ plan/price မသတ်မှတ်ထား"
+      ],
+      "sources": [
+        {
+          "label": "Udemy Personal Plan",
+          "url": "https://www.udemy.com/personal-plan/"
+        }
+      ],
+      "confidence": "High",
+      "edited": false
+    },
+    {
+      "id": "expressvpn",
+      "product": "ExpressVPN",
+      "category": "VPN",
+      "freeVsPaid": "Official plans အားလုံးမှာ core VPN ရပြီး Basic, Advanced, Express Pro တို့က simultaneous devices နှင့် password manager, tracker blocking, identity tools, dedicated IP/private AI စသည့် extras အလိုက်ကွာပါတယ်။",
+      "plans": [
+        {
+          "name": "Basic",
+          "difference": "Core VPN; devices 10 ခန့်",
+          "bestFor": "privacy/streaming basic use",
+          "limits": "Advanced security extras နည်း"
+        },
+        {
+          "name": "Advanced",
+          "difference": "1 device",
+          "bestFor": "security-conscious user",
+          "limits": "Extra feature region အလိုက်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "1 device · phone",
+          "price": "8,000 Ks"
+        },
+        {
+          "plan": "1 device · laptop",
+          "price": "9,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Fast global VPN network",
+        "Audited privacy/security reputation"
+      ],
+      "limitations": [
+        "VPN သည် anonymity အပြည့်မအာမခံ",
+        "Streaming/site access အမြဲမအာမခံ"
+      ],
+      "ownerNotes": [
+        "ဆိုင်၏ phone/laptop 1-device plan သည် official Basic/Advanced/Pro မဟုတ်သော reseller restriction ဖြစ်နိုင်; account ownership, duration, tier စစ်ရန်"
+      ],
+      "sources": [
+        {
+          "label": "ExpressVPN subscriptions",
+          "url": "https://www.expressvpn.com/support/manage-account/available-subscriptions/"
+        }
+      ],
+      "confidence": "Medium",
+      "edited": true
+    },
+    {
+      "id": "generic-vpn",
+      "product": "VPN Key",
+      "category": "VPN",
+      "freeVsPaid": "ဆိုင်သီးသန့် generic VPN key ဖြစ်၍ provider, protocol, server locations, logs policy နှင့် official plan ကိုမသိရသေးပါ။ Data quota နှင့် device count သာ price file မှာရှိပါတယ်။",
+      "plans": [
+        {
+          "name": "100GB · 1 device",
+          "difference": "Data 100GB နှင့် device 1 ခုဟုသာသိရ",
+          "bestFor": "light browsing",
+          "limits": "Provider/speed/expiry/log policy မသိ"
+        },
+        {
+          "name": "200GB · 2 devices",
+          "difference": "Data နှင့် device allowance နှစ်ဆ",
+          "bestFor": "နှစ်လုံးသုံးသူ",
+          "limits": "Provider/speed/expiry/log policy မသိ"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "100GB · 1 device",
+          "price": "9,000 Ks"
+        },
+        {
+          "plan": "200GB · 2 devices",
+          "price": "18,000 Ks"
+        }
+      ],
+      "strengths": [
+        "Data quota ဈေးသက်သာနိုင်",
+        "Setup လွယ်နိုင်"
+      ],
+      "limitations": [],
+      "ownerNotes": [
+        "Knowledge approve မလုပ်မီ provider name, duration/expiry, supported OS, server countries, logs policy နှင့် setup guide ဖြည့်ရန်"
+      ],
+      "sources": [],
+      "confidence": "Low",
+      "edited": true
+    },
+    {
+      "id": "discord-nitro",
+      "product": "Discord Nitro",
+      "category": "Gaming & Community",
+      "freeVsPaid": "Free Discord မှာ chat, voice, communities ရပါတယ်။ Nitro Basic က emoji/stickers နဲ့ 50MB upload ခန့်၊ Nitro full က 500MB upload, HD streaming, 2 server boosts, profile customization နှင့် 200 servers အထိတိုးပေးပါတယ်။",
+      "plans": [
+        {
+          "name": "Free",
+          "difference": "Core chat/voice/video; 10MB upload ခန့်; 100 servers",
+          "bestFor": "casual user",
+          "limits": "Global emoji, HD stream, larger upload မရ"
+        },
+        {
+          "name": "Nitro Basic",
+          "difference": "Global emoji/stickers, 50MB uploads, super reactions, basic customization",
+          "bestFor": "budget community user",
+          "limits": "Boosts/HD/full profile features မပါ"
+        },
+        {
+          "name": "Nitro",
+          "difference": "500MB uploads, HD streaming, 2 boosts, full profiles/themes, 200 servers",
+          "bestFor": "heavy Discord user/creator",
+          "limits": "Monthly/yearly subscription"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Community personalization",
+        "Nitro full တွင် HD stream နှင့် boosts"
+      ],
+      "limitations": [
+        "Subscription က paid server membership မပေး",
+        "Regional/gift eligibility rules ရှိ"
+      ],
+      "ownerNotes": [
+        "DiscordNitroအတွက်ဆိုရင်Adminဆီပဲတိုက်ရိုက်လွတ်ပေးပါ"
+      ],
+      "sources": [
+        {
+          "label": "Discord Nitro guide",
+          "url": "https://support.discord.com/hc/en-us/articles/115000435108-What-are-Nitro-Nitro-Basic"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "steam-wallet",
+      "product": "Steam Wallet",
+      "category": "Gaming",
+      "freeVsPaid": "Steam Wallet သည် subscription plan မဟုတ်ဘဲ Steam account ထဲသို့ stored-value credit ဖြည့်ခြင်းဖြစ်ပါတယ်။ Games, software, hardware သို့ in-game purchases အတွက်သုံးနိုင်ပြီး region/currency rules ရှိပါတယ်။",
+      "plans": [
+        {
+          "name": "Digital Gift Card",
+          "difference": "Friend account သို့ supported amount ပို့",
+          "bestFor": "gift ပေးရန်",
+          "limits": "Friend eligibility, region/currency restrictions"
+        },
+        {
+          "name": "Wallet Code / Top-up",
+          "difference": "ကိုယ့် account wallet balance ဖြည့်",
+          "bestFor": "game/DLC ဝယ်ရန်",
+          "limits": "Refund/transfer rules ကန့်သတ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any amount",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Steam catalog အတွင်း flexible credit",
+        "Gift/top-up options"
+      ],
+      "limitations": [
+        "Cash ပြန်ထုတ်/transfer မလွယ်",
+        "Region/currency mismatch နှင့် scam risk"
+      ],
+      "ownerNotes": [
+        "Steamwalletအတွက်ဆိုရင်Adminဆီပဲတိုက်ရိုက်လွတ်ပေးပါ"
+      ],
+      "sources": [
+        {
+          "label": "Steam digital gift card FAQ",
+          "url": "https://store.steampowered.com/digitalgiftcards/selectgiftcardFAQ"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "playstation-plus",
+      "product": "PlayStation Plus",
+      "category": "Gaming",
+      "freeVsPaid": "Essential က online multiplayer, monthly games, discounts/cloud saves ပေးပါတယ်။ Extra က Game Catalog ထည့်ပြီး Premium က Classics, trials နှင့် cloud streaming ထပ်ပေးပါတယ်။ Region အချို့တွင် Premium အစား Deluxe ဖြစ်ပြီး streaming မပါနိုင်ပါ။",
+      "plans": [
+        {
+          "name": "Essential",
+          "difference": "Online multiplayer, monthly games, discounts, cloud storage",
+          "bestFor": "online console player",
+          "limits": "Game Catalog မပါ"
+        },
+        {
+          "name": "Extra",
+          "difference": "Essential + large PS4/PS5 Game Catalog",
+          "bestFor": "ဂိမ်းများများစမ်းသူ",
+          "limits": "Classics/trials/streaming အပြည့်မပါ"
+        },
+        {
+          "name": "Premium",
+          "difference": "Extra + Classics Catalog, trials, cloud streaming eligible regions",
+          "bestFor": "maximum catalog/retro user",
+          "limits": "Streaming region/internet dependent"
+        },
+        {
+          "name": "Deluxe",
+          "difference": "Premium markets without cloud streaming; classics/trials focus",
+          "bestFor": "non-streaming region user",
+          "limits": "Premium နှင့် feature တူမဟုတ်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any plan",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Online multiplayer + monthly games",
+        "Extra/Premium catalog value"
+      ],
+      "limitations": [
+        "Monthly games ကို active membership ရှိမှ access ဆက်ရ",
+        "Catalog games ဝင်/ထွက်နိုင်"
+      ],
+      "ownerNotes": [
+        "PlayStationPlusအတွက်ဆိုရင်Adminဆီပဲတိုက်ရိုက်လွတ်ပေးပါ"
+      ],
+      "sources": [
+        {
+          "label": "PlayStation Plus",
+          "url": "https://www.playstation.com/en-us/ps-plus/"
+        }
+      ],
+      "confidence": "High",
+      "edited": true
+    },
+    {
+      "id": "game-topup",
+      "product": "Game Top-up",
+      "category": "Gaming",
+      "freeVsPaid": "Generic service ဖြစ်၍ game တစ်ခုချင်း currency, package, player ID/server နှင့် official channel ကွာပါတယ်။ Free vs paid plan မဟုတ်ဘဲ in-game currency/item ဝယ်ယူခြင်းဖြစ်ပါတယ်။",
+      "plans": [
+        {
+          "name": "Direct top-up",
+          "difference": "Player ID/server သို့ currency/package တိုက်ရိုက်ဖြည့်",
+          "bestFor": "supported game account",
+          "limits": "Wrong ID/server မပြန်ရနိုင်"
+        },
+        {
+          "name": "Gift card / code",
+          "difference": "Redeem code ပေး",
+          "bestFor": "ကိုယ်တိုင် redeem လုပ်လိုသူ",
+          "limits": "Region/platform lock ဖြစ်နိုင်"
+        }
+      ],
+      "shopOffers": [
+        {
+          "plan": "Any game/package",
+          "price": "Ask admin"
+        }
+      ],
+      "strengths": [
+        "Game များစွာအတွက် order option ဖြစ်နိုင်",
+        "Direct သို့ code fulfillment"
+      ],
+      "limitations": [
+        "Game/provider မသိ၍ fixed facts မပြောနိုင်",
+        "Scam, region lock, wrong-ID risk"
+      ],
+      "ownerNotes": [
+        "Gameတွေအားလုံးအတွက်topupဆိုရင်adminဆီပဲတိုက်ရိုက်လွတ်ပေးပါ"
+      ],
+      "sources": [],
+      "confidence": "Low",
+      "edited": true
+    }
+  ]
+}

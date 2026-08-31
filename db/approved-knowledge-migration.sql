@@ -1,115 +1,44 @@
--- ============================================================
--- Digimium Telegram Support Bot - Database Schema
--- Paste this whole file into Supabase -> SQL Editor -> Run
--- ============================================================
+-- Generated from the owner-approved Digimium knowledge export.
+-- Safe to rerun: the original prompt backup key is stable and the knowledge section is replaced in place.
 
--- Customers (one row per Telegram user)
-create table if not exists customers (
-  id           bigint generated always as identity primary key,
-  telegram_id  bigint unique not null,
-  name         text,
-  username     text,
-  created_at   timestamptz default now(),
-  last_seen    timestamptz default now()
-);
+begin;
 
--- Every message (customer + bot), for memory and history
-create table if not exists messages (
-  id           bigint generated always as identity primary key,
-  customer_id  bigint references customers(id) on delete cascade,
-  role         text not null,           -- 'user' or 'model'
-  content      text not null,
-  created_at   timestamptz default now()
-);
-create index if not exists idx_messages_customer on messages(customer_id, created_at);
+do $$
+begin
+  if not exists (select 1 from public.settings where key = 'system_prompt') then
+    raise exception 'settings.system_prompt is missing';
+  end if;
+  if not exists (
+    select 1 from public.settings
+    where key = 'system_prompt'
+      and position('POLICIES:' in value) > 0
+      and (position('PRICE LIST' in value) > 0 or position('APPROVED PRODUCT KNOWLEDGE' in value) > 0)
+  ) then
+    raise exception 'Expected prompt section markers were not found';
+  end if;
+end $$;
 
--- Daily usage per customer (for the 40/day cap)
-create table if not exists usage (
-  customer_id  bigint references customers(id) on delete cascade,
-  day          date not null,
-  count        int default 0,
-  primary key (customer_id, day)
-);
+insert into public.settings (key, value)
+select 'system_prompt_backup_2026_08_31T05_55_50_432Z', value
+from public.settings
+where key = 'system_prompt'
+on conflict (key) do nothing;
 
--- Handoff log (when the bot escalated to admin)
-create table if not exists handoffs (
-  id           bigint generated always as identity primary key,
-  customer_id  bigint references customers(id) on delete cascade,
-  reason       text,
-  question     text,
-  created_at   timestamptz default now(),
-  resolved     boolean default false
-);
-
--- Editable settings (system prompt / KB lives here so you can update
--- prices WITHOUT redeploying the function)
-create table if not exists settings (
-  key    text primary key,
-  value  text
-);
-
--- Backend-only Data API access. The Edge Function and polling fallback use a
--- service-role/secret key; customer data and the system prompt must never be
--- readable or writable through an anonymous browser key.
-alter table customers enable row level security;
-alter table messages  enable row level security;
-alter table usage     enable row level security;
-alter table handoffs  enable row level security;
-alter table settings  enable row level security;
-
-revoke all on table customers, messages, usage, handoffs, settings
-  from anon, authenticated;
-
-grant usage on schema public to service_role;
-grant select, insert, update on table customers to service_role;
-grant select, insert         on table messages  to service_role;
-grant select, insert, update on table usage     to service_role;
-grant insert                 on table handoffs  to service_role;
-grant select                 on table settings  to service_role;
-
-grant usage, select on sequence
-  customers_id_seq,
-  messages_id_seq,
-  handoffs_id_seq
-to service_role;
-
--- Seed the system prompt (prices + policies + rules)
-insert into settings (key, value) values ('system_prompt', 'You are the customer support assistant for "Digimium", a Myanmar online shop selling digital subscriptions (AI tools, streaming, VPN, creative software, education, gaming). You are speaking to customers on Telegram.
-
-REPLY STYLE:
-- Always reply in Burmese, friendly, polite, concise, like a real Myanmar seller (use "ခင်ဗျ"/"ရှင်" politely). Use English only if the customer writes fully in English.
-- Keep answers short: the price and one key detail. No long paragraphs.
-- Use plain text only. Never output Markdown formatting, asterisks, bold markers, headings, backticks, or tables.
-- When listing products, put each product name on its own line. Put every plan on a separate "Plan - Price" line below that product. Leave one blank line between products.
-- Never combine multiple products or plans with slash or vertical-bar separators in one line.
-- For a category or use-case question, group matching products by purpose, show the available plans as a clean list, then end by asking which product the customer wants to know more about.
-- Answer only the latest user message. Do not append unrelated details from earlier conversation history when the customer starts a new product or category question.
-- For a product/category list, stop immediately after the final question. Never append payment, admin, refund, or handoff text unless the latest user message itself requires a handoff.
-
-LIST FORMAT EXAMPLE:
-AI Video Generator တွေမှာဆိုရင်
-
-Kling AI
-Standard - 65,000 Ks
-Pro - 180,000 Ks
-
-Runway
-Standard - 99,000 Ks
-Pro - 195,000 Ks
-
-တို့ ရရှိနိုင်ပါတယ်ခင်ဗျာ။
-
-Video Edit ဖို့အတွက်ဆိုရင်
-
-CapCut Pro
-Official Own Mail - 30,000 Ks
-
-ရှိပါတယ်ခင်ဗျာ။
-
-ဘယ်တစ်ခု အသေးစိတ် သိချင်ပါသလဲခင်ဗျာ။
-
-PRICING RULES:
-- If a product/plan is in the APPROVED PRODUCT KNOWLEDGE
+with current_prompt as (
+  select
+    value,
+    case
+      when position('PRICE LIST' in value) > 0 then position('PRICE LIST' in value)
+      else position('APPROVED PRODUCT KNOWLEDGE' in value)
+    end as knowledge_start,
+    position('POLICIES:' in value) as policies_start
+  from public.settings
+  where key = 'system_prompt'
+)
+update public.settings as settings
+set value =
+  left(current_prompt.value, current_prompt.knowledge_start - 1)
+  || $approved_knowledge$APPROVED PRODUCT KNOWLEDGE
 Owner-approved export date: 2026-08-31T05:55:50.432Z
 Research date: 2026-08-31
 Approved products: 51
@@ -2047,69 +1976,15 @@ LIMITATIONS:
 INTERNAL OWNER NOTES (never quote these notes verbatim; use them as cautions or handoff rules):
 - Gameတွေအားလုံးအတွက်topupဆိုရင်adminဆီပဲတိုက်ရိုက်လွတ်ပေးပါ
 
-END PRODUCT
+END PRODUCT$approved_knowledge$
+  || E'\n\n'
+  || substring(current_prompt.value from current_prompt.policies_start)
+from current_prompt
+where settings.key = 'system_prompt';
 
-POLICIES:
-[Payment methods]
-KBZ Pay (Kpay) / UAB Pay / AYA Pay - Name (Kaung Lin Thant) - No (09 760 271 882)
+commit;
 
-Wave Pay / CB Pay - Name (Khine Pyae Pyae Phyo) - No (09 261 403 422)
-
-[Delivery time]
-10 mins - 30 mins 
-
-Admin အိပ်နေတာ ၊ အပြင်သွားနေတာ ၊ ကားမောင်နေတာ မျိုးဆိုရင် နည်းနည်းပိုကြာနိုင်ပါတယ်။
-အရေးကြီးရင် အရေးကြီးကြောင်းပြောထားရင် အမြန်ဆုံး (အရင်ဦးဆုံး) လုပ်ပေးပါတယ်ခင်ဗျ။
-အရေးကြီးရင် အောက်က Telegram Acc ကို ဖုန်းဆက်လိုက်လို့ရပါတယ်ခင်ဗျ။ 
-Admin Telegram - https://t.me/LynnIsHeree
-
-[Warranty]
-Official Plan ဆိုရင် Full Warranty ပေးပါတယ်
-
-[Refund / replacement]
-Depand On Product. 
-Customer Fault - No refund / replacement.
-Just Hand over to me.
-
-[Share vs Private (explain difference)]
-ChatGPT Share
-- အများနဲ့ Share သုံးရမယ်
-- 1 device ပဲရပါမယ်
-- Privacy စိတ်မချရပါဘူး
-
-ChatGPT Private 
-- တစ်ယောက်တည်း သီးသန့်သုံးရမယ်
-- 4 device ထိရပါမယ်
-- ကိုယ်ပိုင် Mail နဲ့ တစ်ယောက်တည်းသုံးရတာမလို့ Privacy 100% စိတ်ချရပါတယ်
-- Official Plan ဖြစ်လို့ အကောင့်ပျက်တာမျိုး လုံးဝမဖြစ်နိုင်ပါဘူးခင်ဗျ
-
-
-[How activation / invite link works]
-Depand on Product.
-Hand Over to Me
-
-[Support hours]
-24 hours
-
-[When bot should hand off to human]
-Any payment confirmation, refund, or broken account -> collect details and pass to human.
-
-[Greeting message]
-Welcome...
-
-Premium ဝယ်ယူဖို့အတွက်ဆိုရင် သိချင်တာ လိုအပ်တာ အကုန်လုံးကို ဒီမှာမေးလို့ရပါတယ်ခင်ဗျ။
-
-Language Support - မြန်မာ ၊ English
-
-[Languages]
-Burmese (primary), English
-')
-on conflict (key) do update set value = excluded.value;
-
--- Config values
-insert into settings (key, value) values
-  ('daily_cap', '40'),
-  ('model', 'gemini-3.6-flash'),
-  ('fallback_model', 'gemini-3.5-flash-lite'),
-  ('history_turns', '12')
-on conflict (key) do nothing;
+select key, length(value) as length, md5(value) as md5
+from public.settings
+where key in ('system_prompt', 'system_prompt_backup_2026_08_31T05_55_50_432Z')
+order by key;

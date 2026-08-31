@@ -79,7 +79,8 @@ digimium-bot-project/
 ├── db/
 │   ├── schema.sql                    <- run once for a new database
 │   ├── security-migration.sql        <- harden an existing database
-│   └── response-format-migration.sql <- plain-text product list formatting
+│   ├── response-format-migration.sql <- plain-text product list formatting
+│   └── approved-knowledge-migration.sql <- approved 51-product knowledge
 ├── supabase/
 │   ├── config.toml                   <- Supabase function config (verify_jwt=false)
 │   └── functions/telegram-bot/
@@ -89,7 +90,9 @@ digimium-bot-project/
 └── docs/
     ├── digimium_kb.json              <- older compact export
     ├── digimium_full_prices.json     <- full price-editor export
-    └── PRICE-CONFLICTS.md            <- values needing owner review
+    ├── digimium_approved_knowledge.json <- current owner-approved source
+    ├── approved-product-knowledge.txt <- bot-ready approved knowledge
+    └── PRICE-CONFLICTS.md            <- resolved owner price decisions
 ```
 
 ---
@@ -130,11 +133,14 @@ It must return HTTP 200 and `"service":"digimium-telegram-bot"`. See
 
 ## Updating prices later (no redeploy)
 
-Prices live in the `settings` table, row `system_prompt`.
+Prices and approved product comparisons live in the `settings` table, row
+`system_prompt`.
 Supabase -> Table Editor -> `settings` -> edit `system_prompt` -> Save.
-The bot uses the new text on the next message. The JSON files under `docs/` are
-reference exports and are not loaded at runtime. Resolve the discrepancies in
-`docs/PRICE-CONFLICTS.md` before regenerating and replacing the prompt.
+The bot uses the new text on the next message. The current reviewed source is
+`docs/digimium_approved_knowledge.json`; JSON files are reference exports and
+are not loaded directly at runtime. After a new owner-approved export, run
+`scripts/sync-approved-knowledge.mjs` to regenerate the bot-ready knowledge,
+database migration, and new-install seed.
 
 ## See customers / chats / handoffs
 
