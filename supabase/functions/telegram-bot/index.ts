@@ -483,6 +483,158 @@ function messageKind(msg: any): string {
   return "Unsupported message";
 }
 
+function isPaymentSentNotice(text: string): boolean {
+  const normalized = text.toLowerCase().replace(/\s+/g, " ").trim();
+  return [
+    "ငွေလွှဲပြီး",
+    "ငွေလွဲပြီး",
+    "လွှဲပြီး",
+    "လွဲပြီး",
+    "လွှဲထားပြီး",
+    "လွဲထားပြီး",
+    "ငွေချေပြီး",
+    "ပေးချေပြီး",
+    "ပိုက်ဆံလွှဲပြီး",
+    "payment sent",
+    "payment done",
+    "transfer done",
+    "transferred already",
+    "i paid",
+    "paid already",
+  ].some((phrase) => normalized.includes(phrase)) ||
+    /\b(paid|transferred)\b/.test(normalized);
+}
+
+function mentionsPaymentReceipt(text: string): boolean {
+  const normalized = text.toLowerCase();
+  return normalized.includes("receipt") || normalized.includes("slip") ||
+    normalized.includes("ပြေစာ") || normalized.includes("ဘောင်ချာ");
+}
+
+function canBePaymentReceipt(msg: any): boolean {
+  return Boolean(msg.photo || msg.document);
+}
+
+async function getOpenPaymentCase(customerId: number): Promise<any | null> {
+  const { data, error } = await supabase.from("payment_confirmations")
+    .select("*").eq("customer_id", customerId)
+    .in("status", ["awaiting_receipt", "pending_admin", "not_received"])
+    .order("created_at", { ascending: false }).limit(1).maybeSingle();
+  if (error) throw error;
+  return data;
+}
+
+async function hasRecentReceiptMedia(customerId: number): Promise<boolean> {
+  const { data, error } = await supabase.from("messages")
+    .select("content,created_at").eq("customer_id", customerId)
+    .eq("source", "customer").order("id", { ascending: false }).limit(10);
+  if (error) throw error;
+  const cutoff = Date.now() - 15 * 60 * 1000;
+  return (data ?? []).some((row: any) =>
+    new Date(row.created_at).getTime() >= cutoff &&
+    (/^\[(Photo|Document)\]/.test(row.content) ||
+      mentionsPaymentReceipt(row.content))
+  );
+}
+
+async function writePaymentCase(
+  customerId: number,
+  topic: TopicContext | null,
+  status: "awaiting_receipt" | "pending_admin",
+  values: Record<string, unknown>,
+  existing: any | null,
+): Promise<any> {
+  const payload = {
+    customer_id: customerId,
+    message_thread_id: topic?.message_thread_id ?? null,
+    status,
+    updated_at: new Date().toISOString(),
+    ...values,
+  };
+  if (existing) {
+    const { data, error } = await supabase.from("payment_confirmations")
+      .update(payload).eq("id", existing.id).select().single();
+    if (error) throw error;
+    return data;
+  }
+  const { data, error } = await supabase.from("payment_confirmations")
+    .insert(payload).select().single();
+  if (error) throw error;
+  return data;
+}
+
+async function handlePaymentNotice(
+  customer: any,
+  group: SupportGroup | null,
+  topic: TopicContext | null,
+  text: string,
+): Promise<string> {
+  const existing = await getOpenPaymentCase(customer.id);
+  const alreadyHasReceipt = Boolean(existing?.receipt_message_id) ||
+    await hasRecentReceiptMedia(customer.id);
+  if (alreadyHasReceipt) {
+    await writePaymentCase(
+      customer.id,
+      topic,
+      "pending_admin",
+      { customer_notice: text },
+      existing,
+    );
+    const reply =
+      "Payment Receipt ရရှိထားပါတယ်ခင်ဗျ။ Admin ဘက်က ငွေလွှဲရောက်မရောက် confirm လုပ်ပေးတာကို ခဏစောင့်ပေးပါခင်ဗျ။";
+    if (existing?.status !== "pending_admin" && !topic?.handoff_active) {
+      await createHandoff(
+        customer,
+        group,
+        topic,
+        "Payment receipt received; admin confirmation required",
+        text,
+      );
+    }
+    return reply;
+  }
+
+  await writePaymentCase(
+    customer.id,
+    topic,
+    "awaiting_receipt",
+    { customer_notice: text },
+    existing,
+  );
+  return "ငွေလွှဲထားတဲ့ Payment Receipt လေး ပို့ပေးပါခင်ဗျ။ Receipt ရတာနဲ့ Admin ဘက်က confirm လုပ်ပေးပါမယ်ခင်ဗျ။";
+}
+
+async function handlePaymentReceipt(
+  customer: any,
+  group: SupportGroup | null,
+  topic: TopicContext | null,
+  msg: any,
+  description: string,
+  existing: any | null,
+): Promise<string> {
+  await writePaymentCase(
+    customer.id,
+    topic,
+    "pending_admin",
+    {
+      customer_notice: description,
+      receipt_message_id: msg.message_id,
+      receipt_kind: messageKind(msg),
+    },
+    existing,
+  );
+  if (existing?.status !== "pending_admin" && !topic?.handoff_active) {
+    await createHandoff(
+      customer,
+      group,
+      topic,
+      "Payment receipt received; admin confirmation required",
+      description,
+    );
+  }
+  return "Payment Receipt ရရှိပါပြီခင်ဗျ။ Admin ဘက်က ငွေလွှဲရောက်မရောက် confirm လုပ်ပေးတာကို ခဏစောင့်ပေးပါခင်ဗျ။";
+}
+
 async function loadApprovedLearnedKnowledge(): Promise<string> {
   const { data, error } = await supabase.from("knowledge_candidates")
     .select("content,edited_content,reviewed_at")
@@ -583,6 +735,29 @@ async function handlePrivateMessage(msg: any): Promise<boolean> {
         topic.message_thread_id,
       );
     }
+    const openPayment = canBePaymentReceipt(msg)
+      ? await getOpenPaymentCase(customer.id)
+      : null;
+    const isPaymentReceipt = canBePaymentReceipt(msg) &&
+      (Boolean(openPayment) || isPaymentSentNotice(text) ||
+        mentionsPaymentReceipt(text));
+    if (isPaymentReceipt) {
+      const reply = await handlePaymentReceipt(
+        customer,
+        group,
+        topic,
+        msg,
+        mediaDescription,
+        openPayment,
+      );
+      if (topic?.mode !== "total_handoff") {
+        await tgSend(msg.chat.id, reply);
+        await saveMessage(customer.id, "model", "bot", reply);
+        await mirrorText(group, topic, "bot", reply);
+        return true;
+      }
+      return false;
+    }
     if (topic?.mode !== "total_handoff") {
       const reply = "ဒီဖိုင်ကို Admin team က စစ်ဆေးပြီး ပြန်ဖြေပေးပါမယ်ခင်ဗျ။";
       await tgSend(msg.chat.id, reply);
@@ -628,6 +803,14 @@ async function handlePrivateMessage(msg: any): Promise<boolean> {
       );
     }
     return false;
+  }
+
+  if (isPaymentSentNotice(text)) {
+    const reply = await handlePaymentNotice(customer, group, topic, text);
+    await tgSend(msg.chat.id, reply);
+    await saveMessage(customer.id, "model", "bot", reply);
+    await mirrorText(group, topic, "bot", reply);
+    return true;
   }
 
   const usage = await getUsage(customer.id);
@@ -860,6 +1043,70 @@ async function closeHandoff(group: SupportGroup, topicRow: any) {
     group,
     topicRow.message_thread_id,
     "✅ Handoff ကို resolved လုပ်ပြီး Hybrid Mode ပြန်ဖွင့်ထားပါတယ်။ Topic ကို မပိတ်ထားပါ။",
+  );
+}
+
+async function confirmPayment(
+  group: SupportGroup,
+  topicRow: any,
+  adminId: number,
+  status: "received" | "not_received",
+) {
+  const customer = topicRow.customers;
+  if (!customer?.telegram_id) {
+    throw new Error("Topic customer mapping is missing");
+  }
+  const { data: latest, error: latestError } = await supabase
+    .from("payment_confirmations").select("*")
+    .eq("customer_id", topicRow.customer_id)
+    .order("created_at", { ascending: false }).limit(1).maybeSingle();
+  if (latestError) throw latestError;
+
+  const confirmedAt = new Date().toISOString();
+  const payload = {
+    customer_id: topicRow.customer_id,
+    message_thread_id: topicRow.message_thread_id,
+    status,
+    confirmed_by_telegram_id: adminId,
+    confirmed_at: confirmedAt,
+    updated_at: confirmedAt,
+  };
+  if (latest) {
+    const { error } = await supabase.from("payment_confirmations")
+      .update(payload).eq("id", latest.id);
+    if (error) throw error;
+  } else {
+    const { error } = await supabase.from("payment_confirmations").insert({
+      ...payload,
+      customer_notice: "Admin confirmation without a tracked receipt message",
+    });
+    if (error) throw error;
+  }
+
+  const customerReply = status === "received"
+    ? "ငွေလွှဲငွေ ရောက်ရှိကြောင်း Admin က confirm လုပ်ပေးပြီးပါပြီခင်ဗျ။ Order ကို ဆက်လက်ဆောင်ရွက်ပေးပါမယ်ခင်ဗျ။"
+    : "ငွေလွှဲငွေ မရောက်ရှိသေးပါခင်ဗျ။ လွှဲထားတဲ့ Account သို့မဟုတ် ဖုန်းနံပါတ်၊ Amount နဲ့ Transaction Status မှန်မမှန် ပြန်စစ်ပြီး Payment Receipt ကို ပြန်ပို့ပေးပါခင်ဗျ။";
+  const sent = await tgSend(customer.telegram_id, customerReply);
+  await saveMessage(
+    topicRow.customer_id,
+    "model",
+    "admin",
+    customerReply,
+    sent?.message_id ?? null,
+    adminId,
+  );
+  await touchTopic(topicRow.customer_id, { handoff_active: false });
+  const { error: handoffError } = await supabase.from("handoffs")
+    .update({ resolved: true }).eq("customer_id", topicRow.customer_id)
+    .eq("resolved", false);
+  if (handoffError) throw handoffError;
+
+  await sendTopicText(
+    group,
+    topicRow.message_thread_id,
+    status === "received"
+      ? "✅ Customer ကို ငွေလွှဲရောက်ကြောင်း ပြန်ပြောပြီးပါပြီ။"
+      : "❌ Customer ကို ငွေလွှဲမရောက်သေးကြောင်းနဲ့ လွှဲထားတာပြန်စစ်ရန် ပြောပြီးပါပြီ။",
   );
 }
 
@@ -1428,6 +1675,14 @@ async function handleGroupMessage(msg: any): Promise<boolean> {
       await setSupportMode(group, topicRow, "hybrid");
       return false;
     }
+    if (command.name === "receive") {
+      await confirmPayment(group, topicRow, msg.from.id, "received");
+      return false;
+    }
+    if (command.name === "notreceive") {
+      await confirmPayment(group, topicRow, msg.from.id, "not_received");
+      return false;
+    }
     if (command.name === "close") {
       await closeHandoff(group, topicRow);
       return false;
@@ -1488,6 +1743,8 @@ async function handleGroupMessage(msg: any): Promise<boolean> {
           "Customer Topic Commands",
           "/totalhandoff - Admin-only mode",
           "/auto or /resumeai - Hybrid AI mode",
+          "/receive - Confirm payment received and notify customer",
+          "/notreceive - Payment not received; ask customer to recheck",
           "/summarize or /summerize - Summary + knowledge candidate",
           "/close - Resolve handoff; topic stays open",
           "/deletetopic - Summarize, then permanently delete this Telegram topic",
@@ -1623,11 +1880,16 @@ async function selfTest() {
       "customer_id",
     ).limit(1);
     if (error) throw error;
+    const { error: paymentError } = await supabase.from(
+      "payment_confirmations",
+    ).select("id").limit(1);
+    if (paymentError) throw paymentError;
     checks.database = {
       ok: true,
       supportGroupConfigured: Boolean(group),
       knowledgeTopicConfigured: Boolean(group?.knowledge_topic_id),
       logsTopicConfigured: Boolean(group?.logs_topic_id),
+      paymentConfirmationReady: true,
     };
   } catch (error) {
     checks.database = { ok: false, error: errorText(error) };
@@ -1658,7 +1920,7 @@ Deno.serve(async (req) => {
     return Response.json({
       ok: true,
       service: "digimium-telegram-bot",
-      version: "support-topics-1",
+      version: "payment-confirmation-1",
       webhookSecured: true,
     });
   }

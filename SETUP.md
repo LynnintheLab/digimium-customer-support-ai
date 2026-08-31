@@ -23,6 +23,8 @@ conversation summaries, reviewed-knowledge queue, duplicate-update guard, and
 the five-minute scheduler that finds conversations inactive for 30 minutes.
 Then run `db/delete-topic-migration.sql` to enable safely confirmed topic
 deletion with retained database history and an audit log.
+Run `db/payment-confirmation-migration.sql` to store payment receipt state and
+enable the admin `/receive` and `/notreceive` confirmation flow.
 
 ---
 
@@ -145,7 +147,10 @@ host. Two pollers will conflict with HTTP 409.
 | ChatGPT Plus ဘယ်လောက်လဲ         | 130,000 Ks (fix price)                      |
 | Netflix ဘယ်လောက်လဲ              | 18,000 / 19,997 Ks                          |
 | Gamma ရှိလား                    | 78,000 / 165,000 Ks                         |
-| ငွေလွှဲပြီးပါပြီ                 | "team will help" + handoff alert to you     |
+| ငွေလွှဲပြီးပါပြီ                 | asks for receipt, or waits for admin confirm |
+| receipt photo/document           | waits for admin + handoff topic alert        |
+| `/receive` in customer topic     | tells customer payment was received          |
+| `/notreceive` in customer topic  | asks customer to recheck the transfer        |
 
 ---
 

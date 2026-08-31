@@ -87,6 +87,7 @@ digimium-bot-project/
 │   ├── response-format-migration.sql <- plain-text product list formatting
 │   ├── support-topics-migration.sql  <- group topics, relay, review, scheduler
 │   ├── delete-topic-migration.sql    <- deletion audit + retained topic mapping
+│   ├── payment-confirmation-migration.sql <- receipt + admin confirmation state
 │   └── approved-knowledge-migration.sql <- approved 51-product knowledge
 ├── supabase/
 │   ├── config.toml                   <- Supabase function config (verify_jwt=false)
@@ -155,7 +156,7 @@ database migration, and new-install seed.
 
 Supabase -> Table Editor -> `customers`, `messages`, `handoffs`, `usage`.
 The topic workflow additionally uses `support_groups`, `customer_topics`,
-`conversation_summaries`, and `knowledge_candidates`.
+`conversation_summaries`, `knowledge_candidates`, and `payment_confirmations`.
 
 ## Admin support group
 

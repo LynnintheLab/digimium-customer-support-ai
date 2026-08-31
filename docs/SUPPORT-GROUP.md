@@ -33,6 +33,10 @@ sent. Bot command messages are never relayed.
 - `/totalhandoff` — admin-only mode; AI sends no customer replies.
 - `/auto` or `/resumeai` — hybrid mode; AI answers known questions and hands
   unknown or sensitive ones to the topic.
+- `/receive` — confirm that the transfer arrived, notify the customer, and
+  resolve the active payment handoff.
+- `/notreceive` — tell the customer that the transfer has not arrived and ask
+  them to recheck the account, amount, status, and receipt.
 - `/summarize` or `/summerize` — summarize messages added since the previous
   summary and extract reusable facts specifically confirmed by an admin.
 - `/close` — resolve the handoff and return to hybrid mode. It deliberately
@@ -45,6 +49,24 @@ sent. Bot command messages are never relayed.
 - `/status` — show current mode and handoff state.
 - `/note text` — keep the message inside the admin group.
 - `/help` — show the topic command list.
+
+## Payment receipt confirmation
+
+When a customer says they paid without sending a receipt, the bot asks for the
+payment receipt. If the receipt is attached to that message or was just sent,
+the bot does not ask for it again. It stores the case as pending, tells the
+customer to wait, and alerts the customer's admin topic.
+
+The receipt and the customer's statement are not treated as proof that the
+money arrived. An admin makes the final decision inside that customer topic:
+
+- `/receive` records the confirmation and tells the customer the payment was
+  received.
+- `/notreceive` records the result and asks the customer to verify the transfer
+  and send the receipt again.
+
+The current state, receipt reference, admin identity, and confirmation time are
+stored in `payment_confirmations` for support auditing.
 
 ## Automatic summary and learning
 
